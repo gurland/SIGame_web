@@ -5,4 +5,41 @@
 {% endblock %}
 
 {% block body %}
+    <body class="gradient-body">
+        <div class="container">
+            <div class="row">
+                <div class="center-block">                    
+                    <header>
+                        <h1>СИ Онлайн</h1>
+                    </header>
+
+                    <div class="credentials-container" id="registration-box">
+                        <h4>Регистрация</h4>
+                        <form action="" method="post">
+                            <p><input type="text" placeholder="Логин"></p>
+                            <p><input type="email" placeholder="E-Mail"></p>
+                            <p><input type="password" placeholder="Пароль"></p>
+                            <p><button type="submit">Зарегистрироваться</button></p>
+                        </form>
+                    </div>
+
+                    <div class="credentials-container" id="authorization-box">
+                        <h4>Авторизация</h4>
+                        <form action="" method="post">
+                            <p><input type="text" placeholder="Логин"></p>
+                            <p><input type="password" placeholder="Пароль"></p>
+                            <p><button type="submit">Войти</button></p>
+                        </form>
+                    </div>
+
+                    <div id="filler"></div>
+
+                    <div class="switches">
+                        <button id="reg_btn">Регистрация</button>
+                        <button id="auth_btn">Авторизация</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 {% endblock %}
