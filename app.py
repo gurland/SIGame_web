@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Registration template. Trust me!"
+    return "Registration template. Trust me! lolkek"
