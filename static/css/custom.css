@@ -1,0 +1,93 @@
+@font-face{
+    font-family:SI;
+    src: url('http://vladimirkhil.com/fonts/FuturaC.woff') format('woff'),url('http://vladimirkhil.com/fonts/FuturaC.ttf') format('truetype'), url('http://vladimirkhil.com/fonts/FuturaC.svg') format('svg');
+    font-weight:normal;
+    font-style:normal
+}
+
+.gradient-body {
+    background: linear-gradient(to bottom,#000451 0%,#183cf3 50%,#000451 100%);
+    min-height:100vh;
+    color: #fff;
+}
+
+.center-block {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #111;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+
+    /*this to solve "the content will not be cut when the window is smaller than the content": */
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+    background-color: #5a95e2;
+}
+
+@media (max-device-width: 720px) {
+  .center-block {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+.center-block header{
+    text-align: center;
+}
+
+.center-block button{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+}
+
+
+.center-block header h1{
+    padding-top: 10px;
+    font-family: SI, serif;
+    font-size: 30pt;
+    color: #ffe682;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.credentials-container{
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.credentials-container input{
+    width: 100%;
+}
+
+.credentials-container button{
+    width: 100%;
+}
+
+#authorization-box{
+    display: none;
+}
+
+.switches{
+    margin-top: 140px;
+}
+
+
+#reg_btn{
+    float: left;
+    width: 50%;
+}
+
+#auth_btn{
+    float: right;
+    width: 50%;
+}
