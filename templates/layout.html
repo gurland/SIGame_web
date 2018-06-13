@@ -14,6 +14,14 @@
 
     <!-- Add custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <style>
+        @font-face{
+            font-family:SI;
+            src: url({{ url_for('static', filename='fonts/FuturaC.woff') }}) format('woff');
+            font-weight:normal;
+            font-style:normal;
+        }
+    </style>
 
     <!-- Add custom JavaScript -->
     <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
