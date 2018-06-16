@@ -15,17 +15,17 @@
 
                     <div class="credentials-container" id="registration-box">
                         <h4>Регистрация</h4>
-                        <form action="" method="post">
-                            <p><input type="text" placeholder="Логин"></p>
-                            <p><input type="email" placeholder="E-Mail"></p>
-                            <p><input type="password" placeholder="Пароль"></p>
+                        <form action="{{ url_for('register') }}" method="post">
+                            <p><input type="text" placeholder="Логин" name="login"></p>
+                            <p><input type="email" placeholder="E-Mail" name="email"></p>
+                            <p><input type="password" placeholder="Пароль" name="password"></p>
                             <p><button type="submit">Зарегистрироваться</button></p>
                         </form>
                     </div>
 
                     <div class="credentials-container" id="authorization-box">
                         <h4>Авторизация</h4>
-                        <form action="" method="post">
+                        <form action="{{ url_for('login') }}" method="post">
                             <p><input type="text" placeholder="Логин"></p>
                             <p><input type="password" placeholder="Пароль"></p>
                             <p><button type="submit">Войти</button></p>
