@@ -21,18 +21,24 @@
                             <p><input type="password" placeholder="Пароль" name="password"></p>
                             <p><button type="submit">Зарегистрироваться</button></p>
                         </form>
+
+                        {%for message in get_flashed_messages()%}
+                            <p id="already-exists">
+                                {{message}}
+                            </p>
+                        {%endfor%}
                     </div>
 
                     <div class="credentials-container" id="authorization-box">
                         <h4>Авторизация</h4>
                         <form action="{{ url_for('login') }}" method="post">
-                            <p><input type="text" placeholder="Логин"></p>
-                            <p><input type="password" placeholder="Пароль"></p>
+                            <p><input type="text" placeholder="Логин" name="login"></p>
+                            <p><input type="password" placeholder="Пароль" name="password"></p>
                             <p><button type="submit">Войти</button></p>
                         </form>
                     </div>
 
-                    <div id="filler"></div>
+                    <div class="container-fluid" id="filler"></div>
 
                     <div class="switches">
                         <button id="reg_btn">Регистрация</button>
