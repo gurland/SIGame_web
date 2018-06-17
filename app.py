@@ -27,7 +27,6 @@ def load_user(user_id):
 
 
 @app.route("/")
-# @login_required
 def index():
     if current_user.is_authenticated:
         # return render_template('login.html', user_exists=users_exists)
@@ -47,21 +46,15 @@ def login():
 
     login = request.form['login']
     password = request.form['password']
-    user = User()
 
-    def bad_login(login, password):
-        usr_db_creds = Users.get(Users.login == login or Users.email == login)  # credentials written in db
-        if (login == usr_db_creds.login or login == usr_db_creds.email) and (password == usr_db_creds.password):
-            user.id = login
-            return False
-        return True
-
-    if bad_login(login, password):
-        flash('Неправильный логин и/или пароль')
-        return redirect(url_for('index'))
-
-    login_user(user)
+    usr_db_creds = Users.get(Users.login == login or Users.email == login) #credentials written in db
+    if (login in usr_db_creds.login or login in usr_db_creds.email) and (password in usr_db_creds.password):
+        user = User()
+        user.id = login
+        login_user(user, remember=True)
     return redirect(url_for('index'))
+
+
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -73,7 +66,7 @@ def register():
     email = request.form['email']
     password = request.form['password']
 
-    if login == Users.login or email == Users.email:
+    if login in Users.login or email in Users.email:
         flash('Такой пользователь уже существует')
         return render_template('authentication.html')
 
@@ -83,7 +76,3 @@ def register():
 
 
 app.run(debug=True)
-
-
-
-
