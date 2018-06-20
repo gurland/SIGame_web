@@ -26,6 +26,10 @@ def load_user(user_id):
 def index():
     return render_template('auth.html')
 
+@app.route('/authentication')
+def authentication():
+    return render_template('auth.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
