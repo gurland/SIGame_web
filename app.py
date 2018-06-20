@@ -3,6 +3,7 @@ from flask_login import LoginManager, UserMixin
 from db_manager import Users
 
 app = Flask(__name__)
+app.secret_key = 'secret'
 lm = LoginManager()
 lm.init_app(app)
 
