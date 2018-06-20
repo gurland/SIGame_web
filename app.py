@@ -13,6 +13,14 @@ if not Users.table_exists():
 class User(UserMixin):
     pass
 
+@lm.user_loader
+def load_user(user_id):
+    if user_id in Users.email or user_id in Users.login:
+        user = User()
+        user.id = user_id
+        return user
+
+    return None
 
 @app.route("/")
 def index():
