@@ -1,5 +1,5 @@
-from flask import Flask, render_template, redirect, request, url_for
-from flask_login import LoginManager, UserMixin
+from flask import Flask, render_template, redirect, request, url_for, flash
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from db_manager import Users
 
 app = Flask(__name__)
@@ -24,7 +24,10 @@ def load_user(user_id):
 
 @app.route("/")
 def index():
-    return render_template('auth.html')
+    if current_user.is_authenticated:
+        # return render_template('login.html', user_exists=users_exists)
+        return 'Logged in'
+    return redirect(url_for('authentication'))
 
 @app.route('/authentication')
 def authentication():
