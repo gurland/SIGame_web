@@ -36,7 +36,18 @@ def authentication():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    pass
+    if not request.method == 'POST':
+        return redirect(url_for('index'))
+
+    login = request.form['login']
+    password = request.form['password']
+
+    usr_db_creds = Users.get(Users.login == login or Users.email == login) #credentials written in db
+    if (login in usr_db_creds.login or login in usr_db_creds.email) and (password in usr_db_creds.password):
+        user = User()
+        user.id = login
+        login_user(user, remember=True)
+    return redirect(url_for('index'))
 
 
 @app.route('/register', methods=['GET', 'POST'])
