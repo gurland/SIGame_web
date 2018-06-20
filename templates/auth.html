@@ -22,7 +22,7 @@
                             <p><button type="submit">Зарегистрироваться</button></p>
                         </form>
                         {%for message in get_flashed_messages()%}
-                            <p id="already-exists">
+                            <p id="sys-messages">
                                 {{message}}
                             </p>
                         {%endfor%}
