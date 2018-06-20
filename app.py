@@ -9,6 +9,9 @@ lm.init_app(app)
 if not Users.table_exists():
     Users.create_table()
 
+class User(UserMixin):
+    pass
+
 
 @app.route("/")
 def index():
