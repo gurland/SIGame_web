@@ -21,6 +21,11 @@
                             <p><input type="password" placeholder="Пароль" name="password"></p>
                             <p><button type="submit">Зарегистрироваться</button></p>
                         </form>
+                        {%for message in get_flashed_messages()%}
+                            <p id="already-exists">
+                                {{message}}
+                            </p>
+                        {%endfor%}
                     </div>
 
                     <div class="credentials-container" id="authorization-box">

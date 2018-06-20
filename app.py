@@ -59,6 +59,10 @@ def register():
     email = request.form['email']
     password = request.form['password']
 
+    if login in Users.login or email in Users.email:
+        flash('Такой пользователь уже существует')
+        return render_template('auth.html')
+
     Users.create(login=login, email=email, password=password)
 
     return redirect(url_for('index'))
