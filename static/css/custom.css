@@ -60,7 +60,6 @@
 
 .credentials-container input{
     width: 100%;
-    padding-left: 20px;
 }
 
 .credentials-container button{
@@ -84,4 +83,9 @@
 #auth_btn{
     float: right;
     width: 50%;
+}
+
+#already-exists{
+    color: darkred;
+    margin: 0;
 }
