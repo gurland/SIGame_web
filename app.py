@@ -7,11 +7,10 @@ app.secret_key = 'secret'
 lm = LoginManager()
 lm.init_app(app)
 
-if not Users.table_exists():
-    Users.create_table()
 
 class User(UserMixin):
     pass
+
 
 @lm.user_loader
 def load_user(user_id):
@@ -22,12 +21,14 @@ def load_user(user_id):
 
     return None
 
+
 @app.route("/")
 def index():
     if current_user.is_authenticated:
         # return render_template('login.html', user_exists=users_exists)
         return 'Logged in'
     return redirect(url_for('authentication'))
+
 
 @app.route('/authentication')
 def authentication():
