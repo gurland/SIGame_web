@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, current_user
 from peewee import DoesNotExist
 
-from models import Users
+from models import User
 
 app = Flask(__name__)
 app.secret_key = 'secret'
@@ -10,15 +10,11 @@ lm = LoginManager()
 lm.init_app(app)
 
 
-class User(UserMixin):
-    pass
-
-
 @lm.user_loader
 def load_user(user_id):
-    exist_query = Users.select().where(Users.login == user_id)
+    exist_query = User.select().where(User.login == user_id)
     if exist_query:
-        user = User()
+        user = UserMixin()
         user.id = user_id
         return user
 
@@ -48,11 +44,11 @@ def login():
 
     login_str = request.form['login']
     password = request.form['password']
-    user = User()
+    user = UserMixin()
 
     def bad_login(login, password):
         try:
-            user_model = Users.get(login == login)
+            user_model = User.get(login == login)
             if user_model.check_password(password):
                 user.id = login
                 return False
@@ -79,13 +75,13 @@ def register():
     email = request.form['email']
     password = request.form['password']
 
-    exist_query = Users.select().where(Users.login == login | Users.email == email)
+    exist_query = User.select().where(User.login == login | User.email == email)
 
     if exist_query:
         flash('Такой пользователь уже существует')
         return render_template('auth.html')
 
-    u = Users()
+    u = User()
     u.login = login
     u.email = email
     u.set_password(password)

@@ -10,7 +10,7 @@ class BaseModel(Model):
         database = db
 
 
-class Users(BaseModel):
+class User(BaseModel):
     login = CharField(unique=True)
     email = CharField(unique=True)
     pw_hash = TextField()
@@ -22,4 +22,4 @@ class Users(BaseModel):
         return check_password_hash(self.pw_hash, password)
 
 
-db.create_tables([Users], safe=True)
+db.create_tables([User], safe=True)
