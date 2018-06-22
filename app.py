@@ -28,6 +28,9 @@ def index():
 
     return 'logged in'
 
+@app.route('/game')
+def game_page():
+    return render_template('game.html')
 
 @app.route('/authentication')
 def authentication():
