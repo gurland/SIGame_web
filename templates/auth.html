@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>Своя Игра</title>
+{% endblock %}
+
+{% block body %}
+    <body class="gradient-body">
+        <div class="container">
+            <div class="row">
+                <div class="center-block">                    
+                    <header>
+                        <h1>СИ Онлайн</h1>
+                    </header>
+
+                    <div class="credentials-container" id="registration-box">
+                        <h4>Регистрация</h4>
+                        <form action="{{ url_for('register') }}" method="post">
+                            <p><input type="text" placeholder="Логин" name="login" required></p>
+                            <p><input type="email" placeholder="E-Mail" name="email" required></p>
+                            <p><input type="password" placeholder="Пароль" name="password" required></p>
+                            <p><button type="submit">Зарегистрироваться</button></p>
+                        </form>
+                        {%for message in get_flashed_messages()%}
+                            <p id="sys-messages">
+                                {{message}}
+                            </p>
+                        {%endfor%}
+                    </div>
+
+                    <div class="credentials-container" id="authorization-box">
+                        <h4>Авторизация</h4>
+                        <form action="{{ url_for('login') }}" method="post">
+                            <p><input type="text" placeholder="Логин" name="login" required></p>
+                            <p><input type="password" placeholder="Пароль" name="password" required></p>
+                            <p><button type="submit">Войти</button></p>
+                        </form>
+                    </div>
+
+                    <div id="filler"></div>
+
+                    <div class="switches">
+                        <button id="reg_btn">Регистрация</button>
+                        <button id="auth_btn">Авторизация</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}
