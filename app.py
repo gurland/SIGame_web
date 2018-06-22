@@ -36,7 +36,7 @@ def index():
 @app.route('/authentication')
 def authentication():
     if current_user.is_authenticated:
-        redirect(url_for('index'))
+        return redirect(url_for('index'))
 
     return render_template('auth.html')
 
