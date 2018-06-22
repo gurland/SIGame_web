@@ -26,7 +26,7 @@ def index():
     if not current_user.is_authenticated:
         return redirect(url_for('authentication'))
 
-    return 'logged in'
+    return redirect(url_for('game_page'))
 
 @app.route('/game')
 def game_page():
