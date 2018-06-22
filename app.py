@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
-from db_manager import Users
+from models import Users
 
 app = Flask(__name__)
 app.secret_key = 'secret'
@@ -68,7 +68,9 @@ def register():
     email = request.form['email']
     password = request.form['password']
 
-    if login == Users.login or email == Users.email:
+    exist_query = Users.select().where(Users.login == login | Users.email == email)
+
+    if exist_query:
         flash('Такой пользователь уже существует')
         return render_template('auth.html')
 
