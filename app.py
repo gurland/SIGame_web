@@ -1,5 +1,5 @@
-from flask import Flask, render_template, redirect, request, url_for, flash
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
+from flask import Flask, render_template, redirect, request, url_for, flash, session
+from flask_login import LoginManager, UserMixin, login_user, current_user
 from models import Users
 
 app = Flask(__name__)
@@ -14,7 +14,8 @@ class User(UserMixin):
 
 @lm.user_loader
 def load_user(user_id):
-    if user_id in Users.email or user_id in Users.login:
+    exist_query = Users.select().where(Users.login == user_id)
+    if exist_query:
         user = User()
         user.id = user_id
         return user
@@ -24,10 +25,10 @@ def load_user(user_id):
 
 @app.route("/")
 def index():
-    if current_user.is_authenticated:
-        # return render_template('login.html', user_exists=users_exists)
-        return 'Logged in'
-    return redirect(url_for('authentication'))
+    if not current_user.is_authenticated:
+        return redirect(url_for('authentication'))
+
+    return 'logged in'
 
 
 @app.route('/authentication')
@@ -40,18 +41,19 @@ def login():
     if not request.method == 'POST':
         return redirect(url_for('index'))
 
-    login = request.form['login']
+    login_str = request.form['login']
     password = request.form['password']
     user = User()
 
     def bad_login(login, password):
-        usr_db_creds = Users.get(Users.login == login or Users.email == login)  # credentials written in db
-        if (login == usr_db_creds.login or login == usr_db_creds.email) and (password == usr_db_creds.password):
+        user_success_query = Users.select().where((Users.login == login) &
+                                                  (Users.password == password))
+        if user_success_query:
             user.id = login
             return False
         return True
 
-    if bad_login(login, password):
+    if bad_login(login_str, password):
         flash('Неправильный логин и/или пароль')
         return redirect(url_for('index'))
 
@@ -77,6 +79,3 @@ def register():
     Users.create(login=login, email=email, password=password)
 
     return redirect(url_for('index'))
-
-
-app.run(debug=True)
