@@ -1,5 +1,7 @@
-from flask import Flask, render_template, redirect, request, url_for, flash, session
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, current_user
+from peewee import DoesNotExist
+
 from models import Users
 
 app = Flask(__name__)
@@ -33,6 +35,9 @@ def index():
 
 @app.route('/authentication')
 def authentication():
+    if current_user.is_authenticated:
+        redirect(url_for('index'))
+
     return render_template('auth.html')
 
 
@@ -46,11 +51,15 @@ def login():
     user = User()
 
     def bad_login(login, password):
-        user_success_query = Users.select().where((Users.login == login) &
-                                                  (Users.password == password))
-        if user_success_query:
-            user.id = login
-            return False
+        try:
+            user_model = Users.get(login == login)
+            if user_model.check_password(password):
+                user.id = login
+                return False
+
+        except DoesNotExist:
+            return True
+
         return True
 
     if bad_login(login_str, password):
@@ -76,6 +85,10 @@ def register():
         flash('Такой пользователь уже существует')
         return render_template('auth.html')
 
-    Users.create(login=login, email=email, password=password)
+    u = Users()
+    u.login = login
+    u.email = email
+    u.set_password(password)
+    u.save()
 
     return redirect(url_for('index'))
