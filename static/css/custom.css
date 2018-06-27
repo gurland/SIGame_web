@@ -240,6 +240,26 @@
     /*margin: 0px;*/
 /*}*/
 
+#input-field input{
+    height: 100%;
+    width: 100%;
+}
+
+div #input-field{
+    height: 50%;
+    margin: auto;
+}
+
+#send-button input{
+    width: 100%;
+    height: 50%;
+}
+
+form #snd-msg-form{
+    position: absolute;
+    /*margin-top: 5px;*/
+    margin: 0px;
+}
 
 
 
