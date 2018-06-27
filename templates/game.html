@@ -8,6 +8,15 @@
     <body class="gradient-body">
         <div class="interface col-lg-10" id="rooms-block">
             <header class="header" id="title"><span id="game-rooms">Игровые комнаты</span></header>
+            <div class="content" id="rooms-list">
+                <div class="room">
+                    <div class="room-el"><img  id="lock-img" src="{{ url_for('static', filename='img/lock.png') }}" alt="Комната защищена паролем" id="locked"></div>
+                    <div class="room-el"><span id="room-index">1.</span></div>
+                    <div class="room-el"><span id="name">Саня, ты в порядке?</span></div>
+                    <div class="room-el"><span id="package">Аниме пак</span></div>
+                    <div class="room-el"><span id="players">2/3</span></div>
+                </div>
+            </div>
         </div>
 
         <div class="interface col-lg-3" id="chat-block">
