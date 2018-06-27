@@ -89,3 +89,21 @@
     color: darkred;
     margin: 0;
 }
+
+.interface{
+    margin: auto;
+    background-color: #5a95e2;
+    height: 500pt;
+    border: 1px solid #111;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+
+
+
+
+
+
+
+
+
