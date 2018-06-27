@@ -141,7 +141,38 @@
     /*padding-left: 0;*/
 }
 
+#buttons-block{
+    display: flex;
+    /*align-items: center;*/
+    width: 100%;
+}
 
+#buttons-block p{
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+#buttons-block{
+    height: 10%;
+    /*margin-bottom: 20px*/
+    /*padding: 0px;*/
+    margin: auto;
+}
+
+
+#buttons-block p button{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+    height: 99%;
+    width: 100%;
+    margin: auto;
+}
 
 
 
