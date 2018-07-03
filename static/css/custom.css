@@ -218,19 +218,24 @@
 #lock-img{
     max-width: 50px;
     max-height: 50px;
-    padding: 8px;
-    margin: 0px;
+    padding: 0px;
+    margin: auto;
     justify-content: flex-start;
+    border: 1px solid red;
 }
 
 .room{
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    border: 1px solid blue;
+    height: 50px;
 }
 
 .room-el{
     display: flex;
     margin: 30px;
+    height: 50px;
+    border: 1px solid green;
 }
 
 /*#lock-img{*/
@@ -260,6 +265,30 @@ form #snd-msg-form{
     /*margin-top: 5px;*/
     margin: 0px;
 }
+
+.room-headings{
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*height: 40px;*/
+    /*align-items: center;*/
+    border: blueviolet solid 1px;
+}
+
+.heading span{
+    padding: 10px;
+    text-align: center;
+
+}
+
+.heading{
+    text-align: center;
+    border: black solid 1px;
+}
+
+body{
+    display: flex;
+}
+
 
 
 
