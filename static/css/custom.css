@@ -91,7 +91,7 @@
 }
 
 .interface{
-    margin: auto;
+    /*margin: auto;*/
     background-color: #5a95e2;
     height: 500pt;
     border: 1px solid #111;
@@ -120,7 +120,9 @@
 
 #main-block{
     display: flex;
-    width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
@@ -287,6 +289,16 @@ form #snd-msg-form{
 
 body{
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
