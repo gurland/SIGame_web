@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>Своя Игра</title>
+{% endblock %}
+
+{% block body %}
+    <body class="gradient-body">
+        <!--<div class="wrapper">-->
+            <div class="container">
+                <div class="row" id="main-block">
+                    <div class="interface col-lg-9" id="rooms-block">
+                        <header class="header" id="title"><span id="game-rooms">Игровые комнаты</span></header>
+                        <div class="content" id="rooms-list">
+                            <table>
+                                <tr class="room-headings">
+                                    <!--<div class="room-headings">-->
+                                        <th><div class="heading" id="is-locked"><span> </span></div></th>
+                                        <th><div class="heading" id="room-index-hd"><span>№</span></div></th>
+                                        <th><div class="heading" id="room-name"><span>Название комнаты</span></div></th>
+                                        <th><div class="heading" id="package-name"><span>Название пакета</span></div></th>
+                                        <th><div class="heading" id="players-amount"><span>Количество игроков</span></div></th>
+                                    <!--</div>-->
+                                </tr>
+                                <tr class="room">
+                                    <!--<div class="room">-->
+                                        <td><div class="room-el"><img  id="lock-img" src="{{ url_for('static', filename='img/lock.png') }}" alt="Комната защищена паролем" id="locked"></div></td>
+                                        <td><div class="room-el"><span id="room-index">1.</span></div></td>
+                                        <td><div class="room-el"><span id="name">Саня, ты в порядке? </span></div></td>
+                                        <td><div class="room-el"><span id="package">Аниме пак</span></div></td>
+                                        <td><div class="room-el"><span id="players">2/3</span></div></td>
+                                    <!--</div>-->
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="buttons-block">
+                            <p><button id="enter-room">Войти в комнату</button></p>
+                            <p><button id="create-room">Создать комнату</button></p>
+                        </div>
+                    </div>
+
+                    <div class="interface col-lg-4" id="chat-block">
+                        <div id="tabs">
+                            <div class="tab" id="chat-tab"><span id="chat-title">Чат</span></div>
+                            <div class="tab" id="profile-tab">
+                                <img class="avatar" src="{{ url_for('static', filename='img/sample-avatar.jpg') }}" alt="">
+                                <span id="username">xa4 from hohland</span>
+                            </div>
+                        </div>
+
+                        <div class="content" id="live-chat"></div>
+
+                        <div id="send-form">
+                            <form id="snd-msg-form" action="">
+                                <div id="input-field"><input type="text"></div>
+                                <div id="send-button"><input type="submit"></div>
+                            </form>
+                        </div>
+
+                        <div class="user-profile">
+                            <h1>some profile settings here</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--</div>-->
+    </body>
+{% endblock %}

@@ -38,7 +38,7 @@
     background-color: transparent;
     border: 1px solid #ffe682;
     padding: 5px 10px 6px 7px;
-    font-family: SI serif;
+    font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
 }
@@ -85,7 +85,266 @@
     width: 50%;
 }
 
-#already-exists{
+#sys-messages{
     color: darkred;
     margin: 0;
 }
+
+.interface{
+    /*margin: auto;*/
+    background-color: #5a95e2;
+    height: 500pt;
+    border: 1px solid #111;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+#title{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 36px;
+    color: #ffe682;
+
+}
+
+#rooms-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+#main-block{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rooms-list{
+    width: 100%;
+    height: 80%;
+    background-color: #c3d2e2;
+    /*background-color: #fffff9;*/
+    border: 1px solid #111;
+    /*box-shadow: -1 0 10px rgba(0,0,0,.5);*/
+    /*padding-left: 0;*/
+}
+
+#buttons-block{
+    display: flex;
+    /*align-items: center;*/
+    width: 100%;
+}
+
+#buttons-block p{
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+#buttons-block{
+    height: 10%;
+    /*margin-bottom: 20px*/
+    /*padding: 0px;*/
+    margin: auto;
+}
+
+
+#buttons-block p button{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+    height: 99%;
+    width: 100%;
+    margin: auto;
+}
+
+#chat-block{
+    padding: 0px;
+}
+
+
+
+#live-chat{
+    width: 100%;
+    height: 80%;
+    background-color: #c3d2e2;
+    /*background-color: #fffff9;*/
+    border: 1px solid #111;
+    /*margin-top: 26%;*/
+    /*box-shadow: -1 0 10px rgba(0,0,0,.5);*/
+    /*padding-left: 0;*/
+}
+
+.tab{
+    width: 50%;
+    height: 100%;
+    /*margin-bottom: 26%;*/
+    background-color: #5a95e2;
+    border: 1px solid #ffe682;
+    /*display: flex;*/
+    text-align: center;
+}
+
+#tabs{
+    display: flex;
+    height: 10%;
+}
+
+.tab #chat-title{
+    color: #ffe682;
+    padding-top: 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 36px;
+
+}
+
+#lock-img{
+    max-width: 20px;
+    max-height: 20px;
+    padding: 0px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.room{
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*border: 1px solid blue;*/
+    height: 50px;
+}
+
+.room-el{
+    display: flex;
+    margin: 30px;
+    height: 50px;
+    /*border: 1px solid green;*/
+}
+
+/*#lock-img{*/
+    /*height: 80px;*/
+    /*width: 80px;*/
+    /*padding: 8px;*/
+    /*margin: 0px;*/
+/*}*/
+
+#input-field input{
+    height: 100%;
+    width: 100%;
+}
+
+div #input-field{
+    height: 50%;
+    margin: auto;
+}
+
+#send-button input{
+    width: 100%;
+    height: 50%;
+}
+
+form #snd-msg-form{
+    position: absolute;
+    /*margin-top: 5px;*/
+    margin: 0px;
+}
+
+.room-headings{
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*height: 40px;*/
+    /*align-items: center;*/
+    /*border: blueviolet solid 1px;*/
+}
+
+.heading span{
+    padding: 10px;
+    text-align: center;
+
+}
+
+.heading{
+    text-align: center;
+    /*border: black solid 1px;*/
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content table, th, td, tr{
+    border: 2px solid #ffe682;
+}
+
+.content table{
+    width: 100%;
+}
+
+.room-headings{
+    /*border-bottom: 1px solid #ffe682;*/
+}
+
+#profile-tab{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 5px;
+
+}
+
+#username{
+    margin: 3px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+    /*font-size: 0.7vw;*/
+    max-height: 100%;
+    /*max-width: 70%;*/
+    color: #ffe682;
+
+}
+
+.user-profile{
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    #chat-block{
+        display: none;
+    }
+}
+
+
