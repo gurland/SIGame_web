@@ -43,7 +43,10 @@
                     <div class="interface col-lg-4" id="chat-block">
                         <div id="tabs">
                             <div class="tab" id="chat-tab"><span id="chat-title">Чат</span></div>
-                            <div class="tab" id="profile-tab"><span id="username"></span></div>
+                            <div class="tab" id="profile-tab">
+                                <img class="avatar" src="{{ url_for('static', filename='img/sample-avatar.jpg') }}" alt="">
+                                <span id="username">xa4 from hohland</span>
+                            </div>
                         </div>
 
                         <div class="content" id="live-chat"></div>
@@ -53,6 +56,10 @@
                                 <div id="input-field"><input type="text"></div>
                                 <div id="send-button"><input type="submit"></div>
                             </form>
+                        </div>
+
+                        <div class="user-profile">
+                            <h1>some profile settings here</h1>
                         </div>
                     </div>
                 </div>
