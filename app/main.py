@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, current_user
 from peewee import DoesNotExist
 
-from models import User
+from app.models import User
 
 app = Flask(__name__)
 app.secret_key = 'secret'

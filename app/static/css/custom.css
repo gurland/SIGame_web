@@ -113,6 +113,7 @@
 #rooms-block{
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
     padding: 0px;
     margin-right: 10px;
@@ -147,19 +148,15 @@
     display: flex;
     /*align-items: center;*/
     width: 100%;
+    height: 10%;
+
 }
 
 #buttons-block p{
     width: 50%;
     margin: auto;
     height: 100%;
-}
 
-#buttons-block{
-    height: 10%;
-    /*margin-bottom: 20px*/
-    /*padding: 0px;*/
-    margin: auto;
 }
 
 
@@ -170,7 +167,7 @@
     padding: 5px 10px 6px 7px;
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
-    font-size: 18px;
+    font-size: 28px;
     height: 99%;
     width: 100%;
     margin: auto;
@@ -257,9 +254,21 @@ div #input-field{
     margin: auto;
 }
 
-#send-button input{
+#send-button button{
     width: 100%;
-    height: 50%;
+    height: 100%;
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+    margin: auto;
+}
+
+#send-button{
+    height: 100%;
 }
 
 form #snd-msg-form{
@@ -319,13 +328,14 @@ body{
 }
 
 .avatar{
-    max-width: 50px;
-    max-height: 50px;
+    /*max-width: 50px;*/
+    /*max-height: 50px;*/
     margin-left: 5px;
 
 }
 
 #username{
+    /*margin-left: 16px;*/
     margin: 3px;
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
@@ -339,6 +349,8 @@ body{
 
 .user-profile{
     display: none;
+    height: 90%;
+    width: 100%;
 }
 
 @media screen and (max-width: 990px) {

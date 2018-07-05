@@ -4,8 +4,10 @@ $(document).ready(function () {
     let chatBox = $('#live-chat');
     let sendForm = $('#send-form');
     let profileBox = $('.user-profile');
-
-    // profileBox.hide();
+    let title = $('#title');
+    let roomsList = $('#rooms-list');
+    let enterBtn = $('.enter-btn');
+    let createBtn = $('.create-btn');
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -27,6 +29,15 @@ $(document).ready(function () {
         chatBox.show();
         sendForm.show();
         profileBox.hide();
+    });
+
+    $('#create-room').click(function(){
+        title.hide();
+        roomsList.hide();
+        enterBtn.hide();
+        createBtn.css({ width: '100%'});
+        // createBtn.style.width = "100%";
+        // createBtn.innerHTML = "Запустить игру";
     });
 
 
