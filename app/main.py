@@ -5,7 +5,9 @@ from peewee import DoesNotExist
 from models import User
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
 app.secret_key = 'secret'
+
 lm = LoginManager()
 lm.init_app(app)
 
@@ -28,12 +30,14 @@ def index():
 
     return redirect(url_for('game_page'))
 
+
 @app.route('/game')
 def game_page():
     if not current_user.is_authenticated:
         return redirect(url_for('authentication'))
 
     return render_template('game.html')
+
 
 @app.route('/authentication')
 def authentication():
