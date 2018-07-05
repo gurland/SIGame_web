@@ -360,3 +360,99 @@ body{
 }
 
 
+.rooms ul li{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-items: flex-start;
+
+}
+
+.rooms ul{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+#rooms-list #players-amount{
+    width: 10%;
+}
+
+#rooms-list table{
+    text-align: center;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+    color: #ffe682;
+    letter-spacing: 1px;
+}
+
+.user-profile #profile-avatar img{
+    max-width: 150px;
+    max-height: 150px;
+    /*margin-left: 5px;*/
+    margin: 0px;
+    overflow: hidden;
+}
+
+.user-profile #profile-avatar .avatar-uploader{
+    height: 0px;
+    width: 150px;
+    background-color: #111001;
+    opacity: 0;
+    /*z-index: 2;*/
+    position: fixed;
+}
+
+/*.user-profile #profile-avatar .avatar-uploader:hover{*/
+    /*height: 50px;*/
+    /*opacity: 0.8;*/
+    /*transition: 1s;*/
+/*}*/
+
+.user-profile #profile-avatar img:hover > .user-profile #profile-avatar .avatar-uploader{
+    background-color: #111001;
+    height: 50px;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.profile-el{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.profile-el form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.profile-el form input, button{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.profile-el form button{
+    margin-top: 6px;
+    margin-bottom: 3px;
+    font-size: 22px;
+}
+
+button{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+}
+
+
