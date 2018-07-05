@@ -5,7 +5,9 @@ from peewee import DoesNotExist
 from models import User
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
 app.secret_key = 'secret'
+
 lm = LoginManager()
 lm.init_app(app)
 
