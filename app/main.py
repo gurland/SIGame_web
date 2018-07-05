@@ -28,12 +28,14 @@ def index():
 
     return redirect(url_for('game_page'))
 
+
 @app.route('/game')
 def game_page():
     if not current_user.is_authenticated:
         return redirect(url_for('authentication'))
 
     return render_template('game.html')
+
 
 @app.route('/authentication')
 def authentication():
