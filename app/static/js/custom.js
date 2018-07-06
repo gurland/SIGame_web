@@ -8,6 +8,7 @@ $(document).ready(function () {
     let roomsList = $('#rooms-list');
     let enterBtn = $('.enter-btn');
     let createBtn = $('.create-btn');
+    let creationMenu = $('.creation-menu');
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -38,6 +39,15 @@ $(document).ready(function () {
         createBtn.css({ width: '100%'});
         // createBtn.style.width = "100%";
         // createBtn.innerHTML = "Запустить игру";
+        creationMenu.show();
+    });
+
+    $('#back-btn-wrapper').click(function () {
+        creationMenu.hide();
+        title.show();
+        roomsList.show();
+        enterBtn.show();
+        createBtn.css({ width: '50%'});
     });
 
 

@@ -249,7 +249,7 @@
     width: 100%;
 }
 
-div #input-field{
+#input-field{
     height: 50%;
     margin: auto;
 }
@@ -264,18 +264,25 @@ div #input-field{
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
-    margin: auto;
+    /*margin: auto;*/
 }
 
 #send-button{
     height: 100%;
+    width: 100%;
 }
 
-form #snd-msg-form{
+#snd-msg-form{
     position: absolute;
     /*margin-top: 5px;*/
     margin: 0px;
+    /*height: 10%;*/
+    width: 100%;
 }
+
+/*#send-form{*/
+    /*height: 10%;*/
+/*}*/
 
 .room-headings{
     /*display: flex;*/
@@ -455,4 +462,174 @@ button{
     font-size: 18px;
 }
 
+.creation-menu{
+    display: none;
+    height: 90%;
+    width: 100%;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: stretch;*/
+    /*align-items: center;*/
+}
 
+.divider{
+    /*width: 50%;*/
+    height: 100%;
+    /*border: darkred solid 1px;*/
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .one{
+    width: 55%;
+}
+
+
+.wrapper .two{
+    width: 45%;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.cm-el .text{
+    text-align: center;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 36px;
+    color: #ffe682;
+}
+
+#back-btn{
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 24px;
+    color: #ffe682;
+    margin-right: 10px;
+}
+
+#back-btn-wrapper{
+    justify-content: flex-start;
+    /*height: 20%;*/
+    /*margin-top: 20px;*/
+    margin-left:  20px;
+}
+
+.cm-el{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cm-el #block-title{
+    font-size: 56px;
+    margin: 10px;
+}
+
+.cm-el input{
+    margin: 5px;
+    width: 85%;
+    height: 35px;
+    font-size: 22px;
+}
+
+.cm-el #room-link{
+    border: #ffe682 solid 1px;
+    margin-top: 10px;
+    font-size: 28px;
+    padding: 6px;
+}
+
+.cm-el #link-span{
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.divider-elements{
+    margin-top: 50px;
+}
+
+.two .divider-elements{
+    margin-top: 20px;
+}
+
+.players-ready{
+    height: 100%;
+    width: 100%;
+    border: #ffe682 solid 2px;
+    display: flex;
+    justify-content: flex-end;
+    /*align-items: center;*/
+    flex-direction: column;
+}
+
+.two .divider-elements{
+    height: 80%;
+    width: 90%;
+}
+
+.cm-el ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.cm-el ul li{
+    width: 100%;
+    list-style-type: none;
+    border: #ffe682 solid 1px;
+    margin: 0px;
+    padding: 3px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cm-el button{
+    width: 100%;
+    height: 100%;
+}
+
+#add-bot{
+    /*float: bottom;*/
+    height: 10%;
+}
+
+.ready-list{
+    height: 80%;
+    width: 100%;
+}
+
+.cm-el li .nickname{
+    margin-left: 8px;
+    padding-top: 2px;
+}
+
+.cm-el #add-bot-btn{
+    font-size: 24px;
+}
+
+.cm-el li .player-type{
+    width: 30px;
+    height: 100%;
+    /*margin: 3px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin: 0px;*/
+}
+
+/*.fa-user-circle{*/
+    /*margin-left: 6px;*/
+/*}*/
