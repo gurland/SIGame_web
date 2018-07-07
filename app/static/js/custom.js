@@ -42,7 +42,7 @@ $(document).ready(function () {
         creationMenu.show();
     });
 
-    $('#back-btn-wrapper').click(function () {
+    $('#back-btn-wrapper div').click(function () {
         creationMenu.hide();
         title.show();
         roomsList.show();

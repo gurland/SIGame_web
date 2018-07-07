@@ -198,6 +198,12 @@
     border: 1px solid #ffe682;
     /*display: flex;*/
     text-align: center;
+    cursor: pointer;
+}
+
+.tab:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
 }
 
 #tabs{
@@ -293,14 +299,21 @@
 }
 
 .heading span{
-    padding: 10px;
+    /*padding: 10px;*/
     text-align: center;
+    line-height: 1;
+}
 
+#is-locked{
+    border: none;
 }
 
 .heading{
     text-align: center;
     /*border: black solid 1px;*/
+    line-height: 1;
+    border-left: 2px solid #ffe682;
+    border-right: 1px solid #ffe682;
 }
 
 body{
@@ -317,8 +330,20 @@ body{
     align-items: center;
 }
 
-.content table, th, td, tr{
+.content table{
     border: 2px solid #ffe682;
+}
+
+.heading{
+    height: 40px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading span{
+    margin: 0px;
 }
 
 .content table{
@@ -326,8 +351,14 @@ body{
 }
 
 .room-headings{
+    display: flex;
+    /*justify-content: flex-start;*/
+    align-items: center;
+    /*flex-direction: row;*/
     /*border-bottom: 1px solid #ffe682;*/
 }
+
+
 
 #profile-tab{
     display: flex;
@@ -384,6 +415,73 @@ body{
 
 #rooms-list #players-amount{
     width: 10%;
+}
+
+#room-name{
+    width: 35%;
+}
+
+#is-locked{
+    width: 6.5%;
+}
+
+#room-index-hd{
+    width: 10%;
+}
+
+#players-amount{
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#players-amount span{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#package-name{
+    width: 35%;
+}
+
+.players{
+    width: 13.5%;
+}
+
+.room-el{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: red solid 1px;
+    margin: 0px;
+}
+
+.room{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: blue solid 1px;
+    margin: 0px;
+    width: 100%;
+}
+
+.locker{
+    width: 6.5%;
+}
+
+.room-index{
+    width: 10%;
+}
+
+.name{
+    width: 35%;
+}
+
+.package{
+    width: 35%;
 }
 
 #rooms-list table{
@@ -460,6 +558,13 @@ button{
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
 }
 
 .creation-menu{
@@ -519,6 +624,20 @@ button{
     /*height: 20%;*/
     /*margin-top: 20px;*/
     margin-left:  20px;
+
+}
+
+#back-btn-wrapper div{
+    justify-content: flex-start;
+    /*height: 20%;*/
+    /*margin-top: 20px;*/
+    /*margin-left:  20px;*/
+    cursor: pointer;
+}
+
+#back-btn-wrapper div:hover > #back-btn, #back-btn-wrapper div:hover > .back-text{
+    transition: 0.3s;
+    text-shadow: 3px 3px 5px #186ca3;
 }
 
 .cm-el{
@@ -632,4 +751,20 @@ button{
 
 /*.fa-user-circle{*/
     /*margin-left: 6px;*/
+/*}*/
+
+.enter-btn:hover, .create-btn:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
+}
+
+#send-button:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
+}
+
+/*#back-btn-wrapper div:hover ~ #back-btn-wrapper i, #back-btn-wrapper span{*/
+    /*transition: 0.3s;*/
+    /*text-shadow: 1px 1px 0 #186ca3;*/
+    /*cursor: pointer;*/
 /*}*/
