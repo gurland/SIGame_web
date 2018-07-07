@@ -304,9 +304,9 @@
     line-height: 1;
 }
 
-#is-locked{
-    border: none;
-}
+/*#is-locked{*/
+    /*border: none;*/
+/*}*/
 
 .heading{
     text-align: center;
@@ -330,9 +330,16 @@ body{
     align-items: center;
 }
 
-.content table{
+.content th{
     border: 2px solid #ffe682;
+    border-right: 1px solid #ffe682;
 }
+
+.content tr{
+    border-right: 2px solid #ffe682;
+
+}
+
 
 .heading{
     height: 40px;
@@ -398,14 +405,6 @@ body{
 }
 
 
-.rooms ul li{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-items: flex-start;
-
-}
 
 .rooms ul{
     display: flex;
@@ -423,22 +422,28 @@ body{
 
 #is-locked{
     width: 6.5%;
+    border: 1px black;
 }
 
 #room-index-hd{
     width: 10%;
 }
 
+.content table, tbody, tr{
+    width: 100%;
+}
+
 #players-amount{
     width: 100px;
     margin: 0px;
     padding: 0px;
+    border-right: 2px solid #ffe682;
 }
 
 #players-amount span{
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding-left: 10px;
 }
 
 #package-name{
@@ -454,18 +459,30 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: red solid 1px;
+    /*border: red solid 1px;*/
     margin: 0px;
 }
 
-.room{
+.rooms ul li{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     border: blue solid 1px;
-    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     width: 100%;
+    list-style-type: none;
+    /*margin: 0px;*/
+    padding: 0px;
+    justify-items: flex-start;
+}
+
+.rooms ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
 .locker{
