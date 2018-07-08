@@ -1,3 +1,5 @@
 flask
 flask-login
 peewee
+celery
+redis
