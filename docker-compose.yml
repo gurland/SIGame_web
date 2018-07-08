@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  siweb:
+    build: .
+    ports:
+    - "80:80"
+
+    volumes:
+    - ./app/:/app
+
+    environment:
+      BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+
+  redis:
+    image: redis
+    ports:
+    - "6379:6379"
+
+  celery:
+    build: .
+    command: celery worker -A tasks --loglevel INFO
+
+    volumes:
+      - ./app/:/app
+
+    environment:
+      BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
