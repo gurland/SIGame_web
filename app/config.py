@@ -3,7 +3,6 @@ SECURITY_PASSWORD_SALT = 'secret'
 CURRENT_WEBSITE = 'http://127.0.0.1'
 
 # SMTP settings
-
 SMTP_HOST = 'smtp.gmail.com'
 SMTP_PORT = 587
 
