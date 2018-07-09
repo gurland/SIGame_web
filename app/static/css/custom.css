@@ -2,6 +2,10 @@
     background: linear-gradient(to bottom,#000451 0%,#183cf3 50%,#000451 100%);
     min-height:100vh;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .center-block {
@@ -22,7 +26,7 @@
     background-color: #5a95e2;
 }
 
-@media (max-device-width: 720px) {
+@media screen and(max-width: 720px) {
   .center-block {
       width: 100%;
       height: 100%;
@@ -125,13 +129,17 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    margin: 0px;
+    padding: 0px;
 }
 
 .container{
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #rooms-list{
@@ -313,7 +321,8 @@
     /*border: black solid 1px;*/
     line-height: 1;
     border-left: 2px solid #ffe682;
-    border-right: 1px solid #ffe682;
+    /*border-right: 1px solid #ffe682;*/
+    word-wrap: break-word;
 }
 
 body{
@@ -328,6 +337,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .content th{
@@ -359,7 +369,7 @@ body{
 
 .room-headings{
     display: flex;
-    /*justify-content: flex-start;*/
+    justify-content: flex-start;
     align-items: center;
     /*flex-direction: row;*/
     /*border-bottom: 1px solid #ffe682;*/
@@ -398,23 +408,15 @@ body{
     width: 100%;
 }
 
-@media screen and (max-width: 990px) {
-    #chat-block{
-        display: none;
-    }
-}
-
-
-
 .rooms ul{
     display: flex;
     justify-content: flex-start;
     padding: 0px;
 }
 
-#rooms-list #players-amount{
-    width: 10%;
-}
+/*#rooms-list #players-amount{*/
+    /*width: 10%;*/
+/*}*/
 
 #room-name{
     width: 35%;
@@ -434,16 +436,22 @@ body{
 }
 
 #players-amount{
-    width: 100px;
+    width: 13.5%;
     margin: 0px;
     padding: 0px;
-    border-right: 2px solid #ffe682;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    word-wrap: break-word;
+    border-right: none;
 }
 
 #players-amount span{
-    width: 100%;
+    /*width: 100%;*/
+    text-align: center;
     margin: 0px;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
+    word-wrap: break-word;
 }
 
 #package-name{
@@ -453,6 +461,8 @@ body{
 .players{
     width: 13.5%;
 }
+
+
 
 .room-el{
     display: flex;
@@ -476,6 +486,12 @@ body{
     /*margin: 0px;*/
     padding: 0px;
     justify-items: flex-start;
+    cursor: pointer;
+}
+
+.rooms ul li:hover{
+    transition: 0.1s;
+    background-color: #4a7ee6;
 }
 
 .rooms ul{
@@ -518,13 +534,21 @@ body{
     overflow: hidden;
 }
 
+.user-profile #profile-avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .user-profile #profile-avatar .avatar-uploader{
     height: 0px;
     width: 150px;
-    background-color: #111001;
+    background-color: #111111;
     opacity: 0;
     /*z-index: 2;*/
-    position: fixed;
+    position: absolute;
+    bottom: inherit;
 }
 
 /*.user-profile #profile-avatar .avatar-uploader:hover{*/
@@ -533,11 +557,15 @@ body{
     /*transition: 1s;*/
 /*}*/
 
-.user-profile #profile-avatar img:hover > .user-profile #profile-avatar .avatar-uploader{
-    background-color: #111001;
+.user-profile #profile-avatar .avatar:hover + .avatar-uploader{
+    background-color: #111111;
     height: 50px;
-    opacity: 0.8;
-    transition: 1s;
+    opacity: 0.6;
+    transition: height, ease, ease 0.3s;
+}
+
+.avatar-uploader:hover{
+
 }
 
 .profile-el{
@@ -568,6 +596,18 @@ body{
 }
 
 button{
+    /*color: #ffe682;*/
+    /*background-color: transparent;*/
+    /*border: 1px solid #ffe682;*/
+    /*padding: 5px 10px 6px 7px;*/
+    /*font-family: SI, serif;*/
+    /*text-shadow: 1px 1px 0 #000;*/
+    /*font-size: 18px;*/
+    cursor: pointer;
+
+}
+
+#add-bot button{
     color: #ffe682;
     background-color: transparent;
     border: 1px solid #ffe682;
@@ -576,7 +616,11 @@ button{
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
     cursor: pointer;
+}
 
+#add-bot button:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
 }
 
 button:hover{
@@ -775,6 +819,7 @@ button:hover{
     background-color: #186ca3;
 }
 
+
 #send-button:hover{
     transition: 0.3s;
     background-color: #186ca3;
@@ -785,3 +830,82 @@ button:hover{
     /*text-shadow: 1px 1px 0 #186ca3;*/
     /*cursor: pointer;*/
 /*}*/
+
+
+.rooms ul{
+    max-height: 100%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 990px) {
+    #chat-block{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .container, #main-block, body, .wrapper{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #main-block{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #rooms-block{
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+    }
+
+    #room-name, #package-name, .name, .package{
+        width: 25%;
+    }
+
+    #players-amount, .players{
+        width: 20%;
+    }
+
+}
+
+
+.headings{
+    padding: 0px;
+    border: 2px solid #ffe682;
+    width: 100%;
+    margin: 0px;
+}
+
+.room span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.interface #title #game-rooms{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    margin-left: 30px;
+}
+
+.burger{
+    float: right;
+    /*margin-right: 30px;*/
+    margin-top: 10px;
+}
+
+.selected{
+    background-color: #633bf3;
+}
+
+#rooms-list{
+    overflow-y: auto;
+}

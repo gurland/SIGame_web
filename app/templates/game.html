@@ -6,46 +6,113 @@
 
 {% block body %}
     <body class="gradient-body">
-        <!--<div class="wrapper">-->
+        <div class="wrapper">
             <div class="container">
                 <div class="row" id="main-block">
                     <div class="interface col-lg-9" id="rooms-block">
-                        <header class="header" id="title"><span id="game-rooms">Игровые комнаты</span></header>
+                        <header class="header" id="title">
+                            <span id="game-rooms">Игровые комнаты</span>
+                            <i class="burger fas fa-bars"></i>
+                        </header>
+                        <ul class="headings">
+                            <li class="room-headings">
+                                <div class="heading" id="is-locked"><span> </span></div>
+                                <div class="heading" id="room-index-hd"><span>№</span></div>
+                                <div class="heading" id="room-name"><span>Название комнаты</span></div>
+                                <div class="heading" id="package-name"><span>Название пакета</span></div>
+                                <div class="heading" id="players-amount"><span>Количество игроков</span></div>
+                            </li>
+                        </ul>
                         <div class="content" id="rooms-list">
-                            <table>
-                                <tr class="room-headings">
-                                    <th class="heading" id="is-locked"><span> </span></th>
-                                    <th class="heading" id="room-index-hd"><span>№</span></th>
-                                    <th class="heading" id="room-name"><span>Название комнаты</span></th>
-                                    <th class="heading" id="package-name"><span>Название пакета</span></th>
-                                    <th class="heading" id="players-amount"><span>Количество игроков</span></th>
-                                </tr>
-                            </table>
+
 
                             <div class="rooms">
                                 <ul>
-                                    <li class="room">
+                                    <li class="room" id="room-id-1">
                                         <div class="room-el locker"><i class="fas fa-lock"></i></div>
                                         <div class="room-el room-index"><span id="room-index">1.</span></div>
                                         <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
                                         <div class="room-el package"><span id="package">Аниме пак</span></div>
                                         <div class="room-el players"><span id="players">2/3</span></div>
                                     </li>
-                                    <li class="room">
+                                    <li class="room" id="room-id-2">
                                         <div class="room-el locker"><i class="fas fa-lock"></i></div>
                                         <div class="room-el room-index"><span id="room-index">1.</span></div>
                                         <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
                                         <div class="room-el package"><span id="package">Аниме пак</span></div>
                                         <div class="room-el players"><span id="players">2/3</span></div>
                                     </li>
-                                    <li class="room">
+                                    <li class="room" id="room-id-3">
                                         <div class="room-el locker"><i class="fas fa-lock"></i></div>
                                         <div class="room-el room-index"><span id="room-index">1.</span></div>
                                         <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
                                         <div class="room-el package"><span id="package">Аниме пак</span></div>
                                         <div class="room-el players"><span id="players">2/3</span></div>
                                     </li>
-                                    <li class="room">
+                                    <li class="room" id="room-id-4">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-2">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-3">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-4">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-2">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-3">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-4">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-2">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-3">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-4">
                                         <div class="room-el locker"><i class="fas fa-lock"></i></div>
                                         <div class="room-el room-index"><span id="room-index">1.</span></div>
                                         <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
@@ -138,6 +205,6 @@
                     </div>
                 </div>
             </div>
-        <!--</div>-->
+        </div>
     </body>
 {% endblock %}

@@ -9,6 +9,7 @@ $(document).ready(function () {
     let enterBtn = $('.enter-btn');
     let createBtn = $('.create-btn');
     let creationMenu = $('.creation-menu');
+    let room = $('.room');
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -49,6 +50,25 @@ $(document).ready(function () {
         enterBtn.show();
         createBtn.css({ width: '50%'});
     });
+
+    room.click(function () {
+        room.removeClass('selected');
+        $('#' + this.id).toggleClass('selected');
+        enterBtn.prop('disabled', false);
+        enterBtn.style.backgroundColor = '#5a95e2';
+    });
+
+    // roomsList.click(function () {
+    //     room.removeClass('selected');
+    // });
+
+
+    if (!room.hasClass('selected')){
+        enterBtn.style.backgroundColor = '#717f95';
+        enterBtn.prop('disabled', true);
+    }
+
+
 
 
 });
