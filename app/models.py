@@ -1,8 +1,7 @@
-from peewee import SqliteDatabase, Model, CharField, TextField, BooleanField
+from peewee import Model, CharField, TextField, BooleanField, PostgresqlDatabase
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
-db = SqliteDatabase('users.db')
+db = PostgresqlDatabase('test', host='db', user='postgres', password='test', port='5432')
 
 
 class BaseModel(Model):

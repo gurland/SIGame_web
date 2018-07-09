@@ -18,6 +18,16 @@ services:
     ports:
     - "6379:6379"
 
+  db:
+    image: postgres
+    restart: always
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: "test"
+
+
   celery:
     build: .
     command: celery worker -A tasks --loglevel INFO
