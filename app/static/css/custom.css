@@ -987,3 +987,7 @@ button:hover{
 .burger{
     cursor: pointer;
 }
+
+.room{
+    box-shadow: 1px 1px 6px #111111;
+}
