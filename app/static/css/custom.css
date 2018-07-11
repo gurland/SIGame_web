@@ -881,6 +881,10 @@ button:hover{
     #is-locked .locker{
         width: 8%;
     }
+
+    #rooms-block{
+        position: fixed;
+    }
 }
 
 @media screen and (max-width: 768px){
