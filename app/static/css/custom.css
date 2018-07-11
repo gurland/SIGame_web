@@ -973,3 +973,13 @@ button:hover{
         display: none;
     }
 }
+
+@media screen and (max-width: 650px) {
+    #chat-block{
+        transform: scale(0.9);
+    }
+}
+
+.burger{
+    cursor: pointer;
+}
