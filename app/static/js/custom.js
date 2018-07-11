@@ -10,6 +10,11 @@ $(document).ready(function () {
     let createBtn = $('.create-btn');
     let creationMenu = $('.creation-menu');
     let room = $('.room');
+    let headings = $('.headings');
+    let chatBlock = $('#chat-block');
+    let burger = $('.burger');
+    let roomsBlock = $('#rooms-block');
+
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -37,9 +42,8 @@ $(document).ready(function () {
         title.hide();
         roomsList.hide();
         enterBtn.hide();
+        headings.hide();
         createBtn.css({ width: '100%'});
-        // createBtn.style.width = "100%";
-        // createBtn.innerHTML = "Запустить игру";
         creationMenu.show();
     });
 
@@ -48,25 +52,49 @@ $(document).ready(function () {
         title.show();
         roomsList.show();
         enterBtn.show();
+        headings.show();
         createBtn.css({ width: '50%'});
     });
+
+    $('#enter-room').attr('disabled', true);
 
     room.click(function () {
         room.removeClass('selected');
         $('#' + this.id).toggleClass('selected');
-        enterBtn.prop('disabled', false);
-        enterBtn.style.backgroundColor = '#5a95e2';
+        $('#enter-room').attr('disabled', false);
+        $('#enter-room').css({'background-color': '#5a95e2'});
     });
 
-    // roomsList.click(function () {
-    //     room.removeClass('selected');
-    // });
+    burger.hide();
+
+    $(window).resize(function () {
+        //if ($(window).width() <= 990)
+        if(window.matchMedia('(max-width: 900px)').matches){
+            // chatBlock.hide();
+            burger.show();
+            // roomsBlock.append(chatBlock);
+            // chatBlock.width = '100%';
+            // chatBlock.height = '100%';
 
 
-    if (!room.hasClass('selected')){
-        enterBtn.style.backgroundColor = '#717f95';
-        enterBtn.prop('disabled', true);
-    }
+        }
+
+
+    });
+
+    burger.click(function () {
+                // chatBlock.removeClass('col-lg-4');
+                // chatBlock.toggleClass('col-lg-9');
+                // roomsBlock.hide();
+                // chatBlock.width = '100%';
+                // chatBlock.height = '100%';
+                chatBlock.toggle();
+            });
+
+
+
+
+
 
 
 

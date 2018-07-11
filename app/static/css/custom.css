@@ -181,6 +181,10 @@
     margin: auto;
 }
 
+#buttons-block p #enter-room{
+    background-color: #717f95;
+}
+
 #chat-block{
     padding: 0px;
 }
@@ -308,8 +312,11 @@
 
 .heading span{
     /*padding: 10px;*/
-    text-align: center;
-    line-height: 1;
+    /*text-align: center;*/
+    /*line-height: 1;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*#is-locked{*/
@@ -618,6 +625,22 @@ button{
     cursor: pointer;
 }
 
+#send-pass{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#send-pass:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
+}
+
 #add-bot button:hover{
     transition: 0.3s;
     background-color: #186ca3;
@@ -660,7 +683,7 @@ button:hover{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: center;
     align-items: center;
 }
 
@@ -841,27 +864,48 @@ button:hover{
     #chat-block{
         display: none;
     }
+
+    #room-name, #package-name, .name, .package{
+        width: 25%;
+    }
+
+    #players-amount, .players{
+        width: 27%;
+
+    }
+
+    #room-index-hd .room-index{
+        width: 15%;
+    }
+
+    #is-locked .locker{
+        width: 8%;
+    }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 768px){
     .container, #main-block, body, .wrapper{
         width: 100%;
         height: 100%;
         margin: 0px;
         padding: 0px;
+        position: relative;
     }
 
+
     #main-block{
-        width: 100%;
+        /*width: 100%;*/
         height: 100%;
         margin: 0px;
         padding: 0px;
+        position: relative;
     }
 
     #rooms-block{
         height: 100%;
         width: 100%;
         margin: 0px;
+        position: fixed;
     }
 
     #room-name, #package-name, .name, .package{
@@ -869,10 +913,24 @@ button:hover{
     }
 
     #players-amount, .players{
-        width: 20%;
+        width: 27%;
+
+    }
+
+    #room-index-hd .room-index{
+        width: 15%;
+    }
+
+    #is-locked .locker{
+        width: 8%;
+    }
+
+    *{
+        font-size: calc(100% - 1%);
     }
 
 }
+
 
 
 .headings{
@@ -908,4 +966,10 @@ button:hover{
 
 #rooms-list{
     overflow-y: auto;
+}
+
+@media screen and (min-width: 990px){
+    .burger{
+        display: none;
+    }
 }
