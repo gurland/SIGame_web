@@ -1014,6 +1014,9 @@ button:hover{
 }
 
 
+.wrapper .one #room-link{
+    cursor: pointer;
+}
 
 .headings{
     padding: 0px;

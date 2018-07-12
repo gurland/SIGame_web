@@ -123,7 +123,10 @@ $(document).ready(function () {
 
 
 
-
+    $('#room-link').click(function () {
+        $(this).select();
+        document.execCommand("copy");
+    });
 
 
 });
