@@ -63,6 +63,8 @@ $(document).ready(function () {
         $('#' + this.id).toggleClass('selected');
         $('#enter-room').attr('disabled', false);
         $('#enter-room').css({'background-color': '#5a95e2'});
+        $('#enter-room').hover(function () {$(this).css({'background-color':'#186ca3', 'transition':'0.3s'});},
+                               function () {$(this).css({'background-color':'#5a95e2'})});
     });
 
     burger.hide();

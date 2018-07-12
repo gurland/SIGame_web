@@ -185,6 +185,11 @@
     background-color: #717f95;
 }
 
+/*#buttons-block p #enter-room:hover{*/
+    /*transition: 0.3s;*/
+    /*background-color: #186ca3;*/
+/*}*/
+
 #chat-block{
     padding: 0px;
 }
