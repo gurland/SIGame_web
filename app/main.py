@@ -96,9 +96,10 @@ def register():
     u.login = login_str
     u.email = email
     u.set_password(password)
+    u.active = True
     u.save()
 
-    send_activation_email.delay(u.login, generate_confirmation_token(u.login, app))
+    # send_activation_email.delay(u.login, generate_confirmation_token(u.login, app))
     flash('На вашу почту отправленна ссылка активации.')
 
     return redirect(url_for('index'))
