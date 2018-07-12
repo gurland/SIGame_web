@@ -965,6 +965,52 @@ button:hover{
         font-size: calc(100% - 1%);
     }
 
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    .wrapper .divider{
+        line-height: 0.8;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        /*align-items: flex-start;*/
+        flex-direction: row;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .wrapper .one{
+        height: 80%;
+    }
+
+    .wrapper .two #section-name{
+        margin-top: 5px;
+    }
+
+    .wrapper .two #add-bot{
+        height: 20%;
+    }
+
+    .wrapper .divider-elements{
+        margin: 0px;
+    }
+
+    .cm-el{
+        margin: 0px;
+    }
+
+    .cm-el #link-span{
+        margin-top: 10px;
+    }
+
+    .ready-list ul{
+        overflow-y: auto;
+    }
 }
 
 

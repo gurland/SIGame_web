@@ -75,6 +75,10 @@ $(document).ready(function () {
         if(window.matchMedia('(max-width: 900px)').matches){
             // chatBlock.hide();
             burger.show();
+
+            // createBtn.click(function () {
+            //     $('.creation-menu .wrapper').css({'display':'flex', 'justify-content':'center', 'align-items':'flex-start', 'flex-direction':'column'});
+            // });
             // roomsBlock.append(chatBlock);
             // chatBlock.width = '100%';
             // chatBlock.height = '100%';
