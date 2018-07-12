@@ -417,7 +417,7 @@ body{
 
 .user-profile{
     display: none;
-    height: 90%;
+    height: 80%;
     width: 100%;
 }
 
@@ -544,7 +544,7 @@ body{
     max-height: 150px;
     /*margin-left: 5px;*/
     margin: 0px;
-    overflow: hidden;
+    /*overflow: unset;*/
 }
 
 .user-profile #profile-avatar{
