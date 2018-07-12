@@ -6,6 +6,6 @@ CURRENT_WEBSITE = 'http://127.0.0.1'
 SMTP_HOST = 'smtp.gmail.com'
 SMTP_PORT = 587
 
-SMTP_EMAIL = 'perfectgerund@gmail.com'
-SMTP_LOGIN = 'perfectgerund'
-SMTP_PASSWORD = 'papara1111'
+SMTP_EMAIL = 'xxx@gmail.com'
+SMTP_LOGIN = 'xxx'
+SMTP_PASSWORD = 'xxx'
