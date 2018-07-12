@@ -6,45 +6,174 @@
 
 {% block body %}
     <body class="gradient-body">
-        <!--<div class="wrapper">-->
+        <div class="main-wrapper">
             <div class="container">
                 <div class="row" id="main-block">
-                    <div class="interface col-lg-8" id="rooms-block">
-                        <header class="header" id="title"><span id="game-rooms">Игровые комнаты</span></header>
+                    <div class="interface col-lg-9  col-sm-" id="rooms-block">
+                        <header class="header" id="title">
+                            <span id="game-rooms">Игровые комнаты</span>
+                            <i class="burger fas fa-bars"></i>
+                        </header>
+                        <ul class="headings">
+                            <li class="room-headings">
+                                <div class="heading" id="is-locked"><span> </span></div>
+                                <div class="heading" id="room-index-hd"><span>№</span></div>
+                                <div class="heading" id="room-name"><span>Название комнаты</span></div>
+                                <div class="heading" id="package-name"><span>Название пакета</span></div>
+                                <div class="heading" id="players-amount"><span>Количество игроков</span></div>
+                            </li>
+                        </ul>
                         <div class="content" id="rooms-list">
-                            <table>
-                                <tr class="room-headings">
-                                    <!--<div class="room-headings">-->
-                                        <th><div class="heading" id="is-locked"><span> </span></div></th>
-                                        <th><div class="heading" id="room-index-hd"><span>№</span></div></th>
-                                        <th><div class="heading" id="room-name"><span>Название комнаты</span></div></th>
-                                        <th><div class="heading" id="package-name"><span>Название пакета</span></div></th>
-                                        <th><div class="heading" id="players-amount"><span>Количество игроков</span></div></th>
-                                    <!--</div>-->
-                                </tr>
-                                <tr class="room">
-                                    <!--<div class="room">-->
-                                        <td><div class="room-el"><i class="fas fa-lock"></i></div></td>
-                                        <td><div class="room-el"><span id="room-index">1.</span></div></td>
-                                        <td><div class="room-el"><span id="name">Саня, ты в порядке? </span></div></td>
-                                        <td><div class="room-el"><span id="package">Аниме пак</span></div></td>
-                                        <td><div class="room-el"><span id="players">2/3</span></div></td>
-                                    <!--</div>-->
-                                </tr>
-                            </table>
+
+
+                            <div class="rooms">
+                                <ul>
+                                    <li class="room" id="room-id-1">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-2">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-3">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-4">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-5">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-6">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-7">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-8">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-9">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-10">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-11">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-12">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                    <li class="room" id="room-id-13">
+                                        <div class="room-el locker"><i class="fas fa-lock"></i></div>
+                                        <div class="room-el room-index"><span id="room-index">1.</span></div>
+                                        <div class="room-el name"><span id="name">Саня, ты в порядке? </span></div>
+                                        <div class="room-el package"><span id="package">Аниме пак</span></div>
+                                        <div class="room-el players"><span id="players">2/3</span></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="creation-menu">
+                            <div class="cm-el" id="back-btn-wrapper"><div><i id="back-btn" class="fas fa-chevron-circle-left"></i><span class="text back-text">Назад</span></div></div>
+                            <div class="wrapper">
+                                <div class="divider one" id="config">
+                                    <div class="divider-elements">
+                                        <div class="cm-el"><span class="text" id="block-title">Создание комнаты</span></div>
+                                        <div class="cm-el"><input id="room-title" type="text" placeholder="Название комнаты"></div>
+                                        <div class="cm-el"><input id="romm-pass" type="text" placeholder="Пароль"></div>
+                                        <div class="cm-el"><span class="text" id="link-span">Ссылка на комнату</span></div>
+                                        <div class="cm-el"><input id="room-link" value="https://si.com/join?fAy7janXsj"></div>
+                                    </div>
+                                </div>
+                                <div class="divider two" id="user-list">
+                                    <div class="divider-elements">
+                                        <div class="players-ready">
+                                            <div class="cm-el" id="section-name"><span class="text">Игроки</span></div>
+                                            <div class="ready-list">
+                                                <div class="cm-el">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="player-type"><i class="fas fa-robot"></i></div>
+                                                            <span class="nickname">Онотоле</span>
+                                                        </li>
+                                                        <li>
+                                                            <div class="player-type"><i class="player-type fas fa-user-circle"></i></div>
+                                                            <span class="nickname">Login2</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="cm-el" id="add-bot"><button class="cm-el"><span id="add-bot-btn" class="text">Добавить бота</span></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div id="buttons-block">
-                            <p><button id="enter-room">Войти в комнату</button></p>
-                            <p><button id="create-room">Создать комнату</button></p>
+                            <p class="enter-btn"><button id="enter-room">Войти в комнату</button></p>
+                            <p class="create-btn"><button id="create-room">Создать комнату</button></p>
                         </div>
                     </div>
+
+
 
                     <div class="interface col-lg-4" id="chat-block">
                         <div id="tabs">
                             <div class="tab" id="chat-tab"><span id="chat-title">Чат</span></div>
                             <div class="tab" id="profile-tab">
-                                <img class="avatar" src="{{ url_for('static', filename='img/sample-avatar.jpg') }}" alt="">
+                                <!--<img class="avatar" src="{{ url_for('static', filename='img/sample-avatar.jpg') }}" alt="">-->
+                                <i class="avatar fas fa-user-tie"></i>
                                 <span id="username">xa4 from hohland</span>
                             </div>
                         </div>
@@ -54,16 +183,28 @@
                         <div id="send-form">
                             <form id="snd-msg-form" action="">
                                 <div id="input-field"><input type="text"></div>
-                                <div id="send-button"><input type="submit"></div>
+                                <div id="send-button"><button type="submit">Отправить</button></div>
                             </form>
                         </div>
 
                         <div class="user-profile">
-                            <h1>some profile settings here</h1>
+                            <div class="profile-el" id="profile-avatar">
+                                <img class="avatar" src="{{ url_for('static', filename='img/sample-avatar.jpg') }}" alt="TEST">
+                                <div class="avatar-uploader"><p><a href="">Загрузить</a></p></div>
+                            </div>
+                            <div class="profile-el" id="profile-username"><span>xa4 from hohland</span></div>
+                            <div class="profile-el" id="pass-change">
+                                <form action="">
+                                    <input type="text" id="old-pass" placeholder="Старый пароль">
+                                    <input type="text" id="new-pass" placeholder="Новый пароль">
+                                    <input type="text" id="confirm-pass" placeholder="Подтвердите пароль">
+                                    <button id="send-pass" type="submit">Сменить пароль</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <!--</div>-->
+        </div>
     </body>
 {% endblock %}
