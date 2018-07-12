@@ -13,8 +13,9 @@ $(document).ready(function () {
     let headings = $('.headings');
     let chatBlock = $('#chat-block');
     let burger = $('.burger');
-    let roomsBlock = $('#rooms-block');
-
+    // let roomsBlock = $('#rooms-block');
+    let avatarUploader = $('.avatar-uploader');
+    let avatar = $('.avatar');
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -93,7 +94,27 @@ $(document).ready(function () {
                 chatBlock.toggle();
             });
 
+    avatar.hover(function () {
+                    avatarUploader.css({'height':'50px', 'opacity':'0.6', 'transition':'0.4s'});
+                },
+                function () {
+                    avatarUploader.css({'height':'0px', 'opacity':'0', 'transition':'0.4s'});
+                });
 
+    avatarUploader.hover(function () {
+                            avatarUploader.css({'height':'50px', 'opacity':'0.6'});
+
+                        },
+                        function () {
+                            avatarUploader.css({'height':'0px', 'opacity':'0'});
+                        });
+
+    $('.avatar-uploader p a').hover(function () {
+                                        $(this).css({'transition': '0.2s', 'color': '#ffb21b', 'font-size': '18px'})
+                                    },
+                                    function () {
+                                        $(this).css({'transition': '0.2s', 'color': '#ffe682', 'font-size': '1rem'})
+                                    });
 
 
 

@@ -570,15 +570,41 @@ body{
     /*transition: 1s;*/
 /*}*/
 
-.user-profile #profile-avatar .avatar:hover + .avatar-uploader{
-    background-color: #111111;
-    height: 50px;
-    opacity: 0.6;
-    transition: height, ease, ease 0.3s;
+/*.user-profile #profile-avatar .avatar:hover + .avatar-uploader{*/
+    /*background-color: #111111;*/
+    /*height: 50px;*/
+    /*opacity: 0.6;*/
+    /*transition: height, ease, ease 0.3s;*/
+/*}*/
+
+.avatar-uploader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.avatar-uploader:hover{
+.avatar-uploader p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
+}
+
+.avatar-uploader p a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #ffe682;
+}
+
+.avatar-uploader p a:hover{
+    transition: 0.2s;
+    color: #ffb21b;
+    font-size: 18px;
 }
 
 .profile-el{
