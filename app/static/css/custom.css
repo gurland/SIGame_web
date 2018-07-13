@@ -14,16 +14,25 @@
     border: 1px solid #111;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
 
-    /*position:absolute; !*it can be fixed too*!*/
-    left:0; right:0;
-    top:0; bottom:0;
-    margin:auto;
 
+    /*position:fixed; !*it can be fixed too*!*/
+    /*left:0; right:0;*/
+    /*top:0; bottom:0;*/
+    /*margin:auto;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     /*this to solve "the content will not be cut when the window is smaller than the content": */
     max-width:100%;
     max-height:100%;
     /*overflow:auto;*/
     background-color: #5a95e2;
+}
+
+.mb-el{
+    width: 100%;
+    height: 50%;
 }
 
 @media screen and(max-width: 720px) {
@@ -57,7 +66,7 @@
 }
 
 .credentials-container{
-    height: 250px;
+    /*height: 250px;*/
     padding: 10px;
     text-align: center;
 }
@@ -75,7 +84,26 @@
 }
 
 .switches{
-    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /*margin-top: 140px;*/
+}
+
+.auth-reg-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.auth-reg-btns button{
+    margin: 0px;
+    /*padding: 0px;*/
 }
 
 
@@ -919,8 +947,8 @@ button:hover{
     }
 }
 
-@media screen and (max-width: 768px){
-    .container, #main-block, body, .wrapper{
+@media screen and (max-width: 767px){
+    #main-block, body, .wrapper{
         width: 100%;
         height: 100%;
         margin: 0px;
@@ -928,11 +956,22 @@ button:hover{
         position: relative;
     }
 
-    .container{
-        width: 100%;
-        height: 100%;
+    /*.auth-container, auth-row{*/
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*margin: 0px;*/
+        /*padding: 0px;*/
+        /*!*position: fixed;*!*/
+    /*}*/
+
+    .center-block{
+        /*position: absolute;*/
         margin: 0px;
-        padding: 0px;
+        height: 100%;
+        width: 100%;
     }
 
 
@@ -1079,3 +1118,17 @@ button:hover{
 .room{
     box-shadow: 1px 1px 6px #111111;
 }
+
+.auth-row{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*.center-block{*/
+    /*margin: 0px;*/
+/*}*/
