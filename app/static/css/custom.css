@@ -1147,3 +1147,6 @@ button:hover{
 /*.center-block{*/
     /*margin: 0px;*/
 /*}*/
+ #chat-block{
+     max-height: 100vh;
+ }
