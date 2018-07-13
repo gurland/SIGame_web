@@ -68,26 +68,26 @@ $(document).ready(function () {
                                function () {$(this).css({'background-color':'#5a95e2'})});
     });
 
-    burger.hide();
+    // burger.hide();
 
-    $(window).resize(function () {
+    // $(window).resize(function () {
         //if ($(window).width() <= 990)
-        if(window.matchMedia('(max-width: 900px)').matches){
-            // chatBlock.hide();
-            burger.show();
+        // if(window.matchMedia('(max-width: 990px)').matches){
+        //     // chatBlock.hide();
+        //     burger.show();
+        //
+        //     // createBtn.click(function () {
+        //     //     $('.creation-menu .wrapper').css({'display':'flex', 'justify-content':'center', 'align-items':'flex-start', 'flex-direction':'column'});
+        //     // });
+        //     // roomsBlock.append(chatBlock);
+        //     // chatBlock.width = '100%';
+        //     // chatBlock.height = '100%';
+        //
+        //
+        // }
 
-            // createBtn.click(function () {
-            //     $('.creation-menu .wrapper').css({'display':'flex', 'justify-content':'center', 'align-items':'flex-start', 'flex-direction':'column'});
-            // });
-            // roomsBlock.append(chatBlock);
-            // chatBlock.width = '100%';
-            // chatBlock.height = '100%';
 
-
-        }
-
-
-    });
+    // });
 
     burger.click(function () {
                 // chatBlock.removeClass('col-lg-4');
