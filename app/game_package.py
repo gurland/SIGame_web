@@ -1,12 +1,21 @@
-from exceptions import AtomTypeError, ValidationError
-
 from bs4 import BeautifulSoup
-from uuid import uuid4 as generate_id
+from uuid import uuid4
 from xml.sax.handler import ContentHandler
 from xml.sax import make_parser
 from xml.sax._exceptions import SAXParseException
 
-xml_file = r'D:\Projects\xml_parser\ProbablyPosledniy\content.xml'
+
+class ParsingError(Exception):
+    pass
+
+
+class AtomTypeError(ParsingError):
+    pass
+
+
+class ValidationError(ParsingError):
+    pass
+
 
 class Package:
     def __init__(self, xml_file):
@@ -31,18 +40,14 @@ class Package:
             self.comments = []
             self.sources = []
 
-        try:
-            self.date = self.root['date']
-            self.version = self.root['version']
-            self.id = self.root['id']
-            self.restriction = self.root['restriction']
-        except KeyError:
-            self.restriction = []
-            self.date = []
-            self.version = []
-            self.id = str(generate_id())
+        self.name = self.root.get('name', '')
+        self.date = self.root.get('date', '')
+        self.version = self.root.get('version', '')
+        self.id = self.root.get('id', str(uuid4()))
+        self.restriction = self.root.get('restriction', '')
 
-    def _is_well_formed(self, xml_file):
+    @staticmethod
+    def _is_well_formed(xml_file):
         parser = make_parser()
         parser.setContentHandler(ContentHandler())
         try:
@@ -50,18 +55,26 @@ class Package:
         except SAXParseException:
             raise ValidationError('XML is not well-formed')
 
-
-
     def to_dict(self):
         package_rounds = []
+        package_dict = {'id': self.id,
+                        'name': self.name,
+                        'date': self.date,
+                        'version': self.version,
+                        'restriction': self.restriction,
+                        'comments': self.comments,
+                        'authors': self.authors,
+                        'sources': self.sources,
+                        'rounds': package_rounds,
+                        }
 
-        for round in self.soup.find_all('round'):
-            round_name = round['name']
+        for round_element in self.soup.find_all('round'):
+            round_name = round_element['name']
 
             try:
-                round_authors = [author.text for author in round.find('info').find_all('author')]
-                round_comments = [comments.text for comments in round.find('info').find_all('comments')]
-                round_sources = [sources.text for sources in round.find('info').find_all('sources')]
+                round_authors = [author.text for author in round_element.find('info').find_all('author')]
+                round_comments = [comments.text for comments in round_element.find('info').find_all('comments')]
+                round_sources = [sources.text for sources in round_element.find('info').find_all('sources')]
             except AttributeError:
                 round_authors = []
                 round_comments = []
@@ -69,7 +82,7 @@ class Package:
 
             themes = []
 
-            for theme in round.find_all('theme'):
+            for theme in round_element.find_all('theme'):
                 theme_name = theme['name']
                 try:
                     theme_authors = [author.text for author in theme.find('info').find_all('author')]
@@ -94,38 +107,41 @@ class Package:
                         q_comments = []
                         q_sources = []
 
-                    atoms = list(self.get_atoms(question))
+                    atoms, atom_answers = self.get_atoms(question)
                     answers = [answer.text for answer in question.find('right').find_all('answer')]
                     params = {}
 
                     try:
-                        type = question.find('type')['name']
-                        for param in question.find('type', attrs={'name': type}).find_all('param'):
+                        q_type = question.find('type')['name']
+                        for param in question.find('type', attrs={'name': q_type}).find_all('param'):
                             params[param['name']] = param.text
                     except TypeError:
-                        type = 'simple'
+                        q_type = 'simple'
                         params = []
 
                     questions.append({'info': {'price': q_price,
                                                'authors': q_authors,
                                                'comments': q_comments,
                                                'sources': q_sources,
-                                               'type': {'name': type,
+                                               'type': {'name': q_type,
                                                         'params': params}},
                                       'atoms': atoms,
-                                      'answers': answers})
+                                      'answers': answers,
+                                      'atom_answers': atom_answers})
 
-                themes.append({theme_name: {'info': {'authors': theme_authors,
-                                                     'comments': theme_comments,
-                                                     'sources': theme_sources},
-                                            'content': questions}})
+                themes.append({'name': theme_name,
+                               'info': {'authors': theme_authors,
+                                        'comments': theme_comments,
+                                        'sources': theme_sources},
+                               'questions': questions})
 
-            package_rounds.append({round_name: {'info': {'authors': round_authors,
-                                                         'comments': round_comments,
-                                                         'sources': round_sources},
-                                                'content': themes}})
+            package_rounds.append({'name': round_name,
+                                   'info': {'authors': round_authors,
+                                            'comments': round_comments,
+                                            'sources': round_sources},
+                                   'themes': themes})
 
-        return package_rounds
+        return package_dict
 
     def get_media_link(self, atom_type, atom_content):
         if atom_content.startswith('@'):
@@ -134,22 +150,34 @@ class Package:
             return atom_content
 
     def get_atoms(self, question):
-        atom_tags = question.find_all('atom')
-        for atom_tag in atom_tags:
+        atom_elements = question.find_all('atom')
+        atoms = []
+        atom_answers = []
+        atom_after_marker = False
+        for atom_element in atom_elements:
             try:
-                atom_type = atom_tag['type']
+                atom_type = atom_element['type']
             except KeyError:
                 atom_type = 'simple'
 
-            atom_content = atom_tag.text
-            if str(atom_type) in ('simple', 'say', 'marker'):
-                yield atom_type, atom_content
-            elif str(atom_type) in ('image', 'video', 'voice'):
-                yield atom_type, self.get_media_link(atom_type, atom_content)
+            atom_content = atom_element.text
+            if atom_type == 'marker':
+                atom_after_marker = True
+                continue
+
+            elif atom_type in ('simple', 'say'):
+                if atom_after_marker:
+                    atom_answers.append((atom_type, atom_content))
+                else:
+                    atoms.append((atom_type, atom_content))
+
+            elif atom_type in ('image', 'video', 'voice'):
+                if atom_after_marker:
+                    atom_answers.append((atom_type, self.get_media_link(atom_type, atom_content)))
+                else:
+                    atoms.append((atom_type, self.get_media_link(atom_type, atom_content)))
+
             else:
                 raise AtomTypeError('Unknown atom type')
 
-
-p = Package(xml_file)
-
-print(p.to_dict())
+        return atoms, atom_answers
