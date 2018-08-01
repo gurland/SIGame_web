@@ -9,7 +9,8 @@ services:
     volumes:
     - ./app/:/app
     - /media/siweb:/media
-    - /tmp/siweb:/tmp
+    - /tmp/siweb:/tmp/siweb
+
 
     environment:
       BROKER_URL: redis://redis:6379/0
