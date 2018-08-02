@@ -1150,3 +1150,50 @@ button:hover{
  #chat-block{
      max-height: 100vh;
  }
+
+
+ #user-list .players-list{
+     height: 45%;
+     margin-top: 0px;
+ }
+
+ .players-ready #add-bot{
+     height: 20%;
+     /*margin: 0px;*/
+ }
+
+ .two{
+     flex-direction: column;
+ }
+
+ .package-name{
+     margin-left: 15px;
+ }
+
+ #user-list .packages{
+     height: 40%;
+     margin-top: 20px;
+ }
+
+ #user-list{
+     justify-content: unset;
+ }
+
+ .ready-list{
+     overflow-y: auto;
+ }
+
+ .packages #add-bot{
+     height: 23%;
+ }
+
+ .packages li{
+     cursor: pointer;
+ }
+
+ .packages li:hover{
+     background-color: #186ca3;
+     transition: 0.3s;
+ }
+
+

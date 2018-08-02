@@ -68,6 +68,19 @@ $(document).ready(function () {
                                function () {$(this).css({'background-color':'#5a95e2'})});
     });
 
+    // $('.packages li').hover(function () {$(this).css({'background-color':'#186ca3', 'transition':'0.3s'});},
+    //                            function () {$(this).css({'background-color':'#5a95e2'})});
+
+    $('.packages li').click(function () {
+        $('.packages li').removeClass('selected');
+        $('#' + this.id).toggleClass('selected');
+    });
+
+    // if ($('.packages li').hasClass('selected')){
+    //     $('.packages li:hover').hover(function () {$(this).css({'background-color':'#633bf3'});},
+    //                            function () {$(this).css({'background-color':'#633bf3'})});
+    // }
+
     // burger.hide();
 
     // $(window).resize(function () {
