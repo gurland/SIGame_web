@@ -1196,4 +1196,33 @@ button:hover{
      transition: 0.3s;
  }
 
+.user-profile .avatar{
+    font-size: 100pt;
+}
 
+.user-profile #profile-username{
+    font-size: 18pt;
+    text-align: center;
+}
+
+.user-profile #profile-username span{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#profile-tab .avatar{
+    font-size: 26px;
+    margin-right: 15px;
+    /*margin-left: 5px;*/
+}
+
+#profile-tab span, #profile-tab .avatar{
+    text-align: center;
+}
+
+#profile-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
