@@ -1,0 +1,54 @@
+version: '3'
+services:
+
+  siweb:
+    build: .
+    ports:
+    - "80:80"
+
+    volumes:
+    - ./app/:/app
+    - /media/siweb:/media
+    - /tmp/siweb:/tmp/siweb
+
+
+    environment:
+      BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+
+  redis:
+    image: redis
+    ports:
+    - "6379:6379"
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: "test"
+
+
+  celery:
+    build: .
+    command: celery worker -A tasks --loglevel INFO
+
+    volumes:
+      - ./app/:/app
+      - /media/siweb:/media
+      - /tmp/siweb:/tmp
+
+    environment:
+      BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: test

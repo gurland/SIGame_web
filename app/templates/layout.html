@@ -1,0 +1,37 @@
+<!doctype html>
+<head lang="ru">
+    {% block head %}
+    {% endblock %}
+    <meta name="viewport" content="width-device-width, initial-scale=1.0/">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- Add custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <style>
+        @font-face{
+            font-family:SI;
+            src: url({{ url_for('static', filename='fonts/FuturaC.woff') }}) format('woff');
+            font-weight:normal;
+            font-style:normal;
+        }
+    </style>
+
+    <!-- Add custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</head>
+
+
+{% block body %}
+{% endblock %}
