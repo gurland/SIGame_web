@@ -1179,6 +1179,10 @@ button:hover{
      justify-content: unset;
  }
 
+ ::-webkit-scrollbar{
+     display: none;
+ }
+
  .ready-list{
      overflow-y: auto;
  }
@@ -1225,4 +1229,9 @@ button:hover{
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.user-profile{
+    overflow-y: auto;
+    height: 90%;
 }
