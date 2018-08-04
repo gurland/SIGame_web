@@ -76,6 +76,10 @@ $(document).ready(function () {
         $('#' + this.id).toggleClass('selected');
     });
 
+    $('.package-manager li').click(function () {
+        $('.packages li').removeClass('selected');
+        $('#' + this.id).toggleClass('selected');
+    });
     // if ($('.packages li').hasClass('selected')){
     //     $('.packages li:hover').hover(function () {$(this).css({'background-color':'#633bf3'});},
     //                            function () {$(this).css({'background-color':'#633bf3'})});
