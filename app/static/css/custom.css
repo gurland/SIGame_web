@@ -1290,3 +1290,100 @@ button:hover{
     /*border: 1px black;*/
 /*}*/
 
+.package-uploader{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    background-color: #5a95e2;
+    border: 2px solid #ffe682;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.upload-package button{
+    color: #ffe682;
+    background-color: transparent;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+}
+
+.upload-file input{
+    color: #ffe682;
+    background-color: transparent;
+    /*border: 1px solid #ffe682;*/
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+}
+
+.upload-package button:hover{
+    transition: 0.3s;
+    background-color: #186ca3;
+}
+
+.package-uploader .block-name span{
+    text-align: center;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 28px;
+    color: #ffe682;
+}
+
+
+#upload-package{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#upload-package div{
+    width: 80%;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#upload-package .package-title{
+    margin-left: 0px;
+    margin-bottom: 3px;
+    margin-top: auto;
+    width: 100%;
+}
+
+#upload-package button{
+    width: 100%;
+}
+
+#upload-package .package-title input{
+    width: 80%;
+}
+
+#upload-package .upload-package{
+    margin-bottom: 0px;
+    margin-top: auto;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+}
+
+#upload-package .upload-package button{
+    margin: 0px;
+}
+
+
+

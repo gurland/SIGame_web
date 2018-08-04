@@ -16,6 +16,11 @@ $(document).ready(function () {
     // let roomsBlock = $('#rooms-block');
     let avatarUploader = $('.avatar-uploader');
     let avatar = $('.avatar');
+    let packageUploader = $('.package-uploader');
+    let addPackage = $('.add-package');
+    // let delPackage = $('.del-package');
+
+    packageUploader.hide();
 
     $('#auth_btn').click(function () {
         regBox.hide();
@@ -76,10 +81,10 @@ $(document).ready(function () {
         $('#' + this.id).toggleClass('selected');
     });
 
-    $('.package-manager li').click(function () {
-        $('.packages li').removeClass('selected');
-        $('#' + this.id).toggleClass('selected');
-    });
+    // $('.package-manager li').click(function () {
+    //     $('.packages li').removeClass('selected');
+    //     $('#' + this.id).toggleClass('selected');
+    // });
     // if ($('.packages li').hasClass('selected')){
     //     $('.packages li:hover').hover(function () {$(this).css({'background-color':'#633bf3'});},
     //                            function () {$(this).css({'background-color':'#633bf3'})});
@@ -143,6 +148,10 @@ $(document).ready(function () {
     $('#room-link').click(function () {
         $(this).select();
         document.execCommand("copy");
+    });
+
+    addPackage.click(function () {
+        packageUploader.toggle();
     });
 
 
