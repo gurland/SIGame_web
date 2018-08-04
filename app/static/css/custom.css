@@ -589,6 +589,7 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
 }
 
 .user-profile #profile-avatar .avatar-uploader{
@@ -1153,7 +1154,7 @@ button:hover{
 
 
  #user-list .players-list{
-     height: 45%;
+     height: 42.5%;
      margin-top: 0px;
  }
 
@@ -1171,7 +1172,7 @@ button:hover{
  }
 
  #user-list .packages{
-     height: 40%;
+     height: 42.5%;
      margin-top: 20px;
  }
 
@@ -1235,3 +1236,57 @@ button:hover{
     overflow-y: auto;
     height: 90%;
 }
+
+.package-manager .packages{
+    height: 300px;
+}
+
+.ready-list #add-bot{
+    height: 10%;
+}
+
+.package-manager .ready-list{
+    height: 90%;
+}
+
+#pass-change{
+    margin: 0px;
+}
+
+.package-manager{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.package-manager #add-bot{
+    height: 10%;
+    width: 50%;
+    display: inline-block;
+}
+
+.manager-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    /*display: inline-block;*/
+}
+
+/*.package-manager .players-ready{*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: flex-end;*/
+    /*align-items: center;*/
+/*}*/
+
+/*.manager-btns button{*/
+    /*margin: 0px;*/
+    /*border: 1px black;*/
+/*}*/
+
+/*.manager-btns #add-bot{*/
+    /*border: 1px black;*/
+/*}*/
+
