@@ -35,7 +35,7 @@ def game_page():
     if not current_user.is_authenticated:
         return redirect(url_for('authentication'))
 
-    return render_template('game.html')
+    return render_template('menu.html')
 
 
 @app.route('/authentication')
