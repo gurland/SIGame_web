@@ -1297,7 +1297,7 @@ button:hover{
     align-items: center;
     position: fixed;
     width: 400px;
-    height: 300px;
+    height: 150px;
     background-color: #5a95e2;
     border: 2px solid #ffe682;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
@@ -1357,20 +1357,8 @@ button:hover{
     flex-direction: column;
 }
 
-
-#upload-package .package-title{
-    margin-left: 0;
-    margin-bottom: 3px;
-    margin-top: auto;
-    width: 100%;
-}
-
 #upload-package button{
     width: 100%;
-}
-
-#upload-package .package-title input{
-    width: 80%;
 }
 
 #upload-package .upload-package{
