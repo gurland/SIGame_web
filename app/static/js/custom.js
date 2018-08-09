@@ -154,5 +154,9 @@ $(document).ready(function () {
         packageUploader.toggle();
     });
 
+    $('.close-btn').click(function () {
+        packageUploader.hide();
+    });
+
 
 });

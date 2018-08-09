@@ -1385,5 +1385,33 @@ button:hover{
     margin: 0px;
 }
 
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    -webkit-border-radius: 6px;
+}
+
+.package-uploader .block-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn{
+    margin-left: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.manager-name{
+    margin-left: auto;
+}
+
 
 
