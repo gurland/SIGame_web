@@ -1,5 +1,5 @@
 .gradient-body {
-    background: linear-gradient(to bottom,#000451 0%,#183cf3 50%,#000451 100%);
+    background: linear-gradient(to bottom, #000451 0%, #183cf3 50%, #000451 100%);
     min-height:100vh;
     color: #fff;
     display: flex;
@@ -13,20 +13,12 @@
     height: 500px;
     border: 1px solid #111;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
-
-
-    /*position:fixed; !*it can be fixed too*!*/
-    /*left:0; right:0;*/
-    /*top:0; bottom:0;*/
-    /*margin:auto;*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    /*this to solve "the content will not be cut when the window is smaller than the content": */
     max-width:100%;
     max-height:100%;
-    /*overflow:auto;*/
     background-color: #5a95e2;
 }
 
@@ -66,7 +58,6 @@
 }
 
 .credentials-container{
-    /*height: 250px;*/
     padding: 10px;
     text-align: center;
 }
@@ -88,7 +79,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    /*margin-top: 140px;*/
 }
 
 .auth-reg-btns{
@@ -102,19 +92,8 @@
 }
 
 .auth-reg-btns button{
-    /*position: sticky;*/
     margin: 0;
-    /*padding: 0;*/
 }
-
-/*@media screen and (max-height: 720px) {*/
-    /*.switches{*/
-        /*display: none;*/
-    /*}*/
-/*}*/
-
-
-
 
 #reg_btn{
     float: left;
@@ -132,7 +111,6 @@
 }
 
 .interface{
-    /*margin: auto;*/
     background-color: #5a95e2;
     height: 500pt;
     border: 1px solid #111;
@@ -183,15 +161,11 @@
     width: 100%;
     height: 80%;
     background-color: #c3d2e2;
-    /*background-color: #fffff9;*/
     border: 1px solid #111;
-    /*box-shadow: -1 0 10px rgba(0,0,0,.5);*/
-    /*padding-left: 0;*/
 }
 
 #buttons-block{
     display: flex;
-    /*align-items: center;*/
     width: 100%;
     height: 10%;
 
@@ -203,7 +177,6 @@
     height: 100%;
 
 }
-
 
 #buttons-block p button{
     color: #ffe682;
@@ -222,35 +195,22 @@
     background-color: #717f95;
 }
 
-/*#buttons-block p #enter-room:hover{*/
-    /*transition: 0.3s;*/
-    /*background-color: #186ca3;*/
-/*}*/
-
 #chat-block{
     padding: 0;
 }
-
-
 
 #live-chat{
     width: 100%;
     height: 80%;
     background-color: #c3d2e2;
-    /*background-color: #fffff9;*/
     border: 1px solid #111;
-    /*margin-top: 26%;*/
-    /*box-shadow: -1 0 10px rgba(0,0,0,.5);*/
-    /*padding-left: 0;*/
 }
 
 .tab{
     width: 50%;
     height: 100%;
-    /*margin-bottom: 26%;*/
     background-color: #5a95e2;
     border: 1px solid #ffe682;
-    /*display: flex;*/
     text-align: center;
     cursor: pointer;
 }
@@ -284,9 +244,6 @@
 }
 
 .room{
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*border: 1px solid blue;*/
     height: 50px;
 }
 
@@ -294,15 +251,7 @@
     display: flex;
     margin: 30px;
     height: 50px;
-    /*border: 1px solid green;*/
 }
-
-/*#lock-img{*/
-    /*height: 80px;*/
-    /*width: 80px;*/
-    /*padding: 8px;*/
-    /*margin: 0;*/
-/*}*/
 
 #input-field input{
     height: 100%;
@@ -325,7 +274,6 @@
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
-    /*margin: auto;*/
 }
 
 #send-button{
@@ -335,43 +283,20 @@
 
 #snd-msg-form{
     position: absolute;
-    /*margin-top: 5px;*/
     margin: 0;
-    /*height: 10%;*/
     width: 100%;
 }
 
-/*#send-form{*/
-    /*height: 10%;*/
-/*}*/
-
-.room-headings{
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*height: 40px;*/
-    /*align-items: center;*/
-    /*border: blueviolet solid 1px;*/
-}
-
 .heading span{
-    /*padding: 10px;*/
-    /*text-align: center;*/
-    /*line-height: 1;*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*#is-locked{*/
-    /*border: none;*/
-/*}*/
-
 .heading{
     text-align: center;
-    /*border: black solid 1px;*/
     line-height: 1;
     border-left: 2px solid #ffe682;
-    /*border-right: 1px solid #ffe682;*/
     word-wrap: break-word;
 }
 
@@ -400,7 +325,6 @@ body{
 
 }
 
-
 .heading{
     height: 40px;
     margin: 0;
@@ -421,8 +345,6 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /*flex-direction: row;*/
-    /*border-bottom: 1px solid #ffe682;*/
 }
 
 
@@ -433,21 +355,16 @@ body{
 }
 
 .avatar{
-    /*max-width: 50px;*/
-    /*max-height: 50px;*/
     margin-left: 5px;
 
 }
 
 #username{
-    /*margin-left: 16px;*/
     margin: 3px;
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
     font-size: 18px;
-    /*font-size: 0.7vw;*/
     max-height: 100%;
-    /*max-width: 70%;*/
     color: #ffe682;
 
 }
@@ -463,10 +380,6 @@ body{
     justify-content: flex-start;
     padding: 0;
 }
-
-/*#rooms-list #players-amount{*/
-    /*width: 10%;*/
-/*}*/
 
 #room-name{
     width: 35%;
@@ -489,18 +402,13 @@ body{
     width: 13.5%;
     margin: 0;
     padding: 0;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     word-wrap: break-word;
     border-right: none;
 }
 
 #players-amount span{
-    /*width: 100%;*/
     text-align: center;
     margin: 0;
-    /*padding-left: 10px;*/
     word-wrap: break-word;
 }
 
@@ -519,7 +427,6 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /*border: red solid 1px;*/
     margin: 0;
 }
 
@@ -533,7 +440,6 @@ body{
     margin-top: 5px;
     width: 100%;
     list-style-type: none;
-    /*margin: 0;*/
     padding: 0;
     justify-items: flex-start;
     cursor: pointer;
@@ -579,9 +485,7 @@ body{
 .user-profile #profile-avatar img{
     max-width: 150px;
     max-height: 150px;
-    /*margin-left: 5px;*/
     margin: 0;
-    /*overflow: unset;*/
 }
 
 .user-profile #profile-avatar{
@@ -597,23 +501,9 @@ body{
     width: 150px;
     background-color: #111111;
     opacity: 0;
-    /*z-index: 2;*/
     position: absolute;
     bottom: inherit;
 }
-
-/*.user-profile #profile-avatar .avatar-uploader:hover{*/
-    /*height: 50px;*/
-    /*opacity: 0.8;*/
-    /*transition: 1s;*/
-/*}*/
-
-/*.user-profile #profile-avatar .avatar:hover + .avatar-uploader{*/
-    /*background-color: #111111;*/
-    /*height: 50px;*/
-    /*opacity: 0.6;*/
-    /*transition: height, ease, ease 0.3s;*/
-/*}*/
 
 .avatar-uploader{
     display: flex;
@@ -673,15 +563,7 @@ body{
 }
 
 button{
-    /*color: #ffe682;*/
-    /*background-color: transparent;*/
-    /*border: 1px solid #ffe682;*/
-    /*padding: 5px 10px 6px 7px;*/
-    /*font-family: SI, serif;*/
-    /*text-shadow: 1px 1px 0 #000;*/
-    /*font-size: 18px;*/
     cursor: pointer;
-
 }
 
 #add-bot button{
@@ -725,16 +607,10 @@ button:hover{
     display: none;
     height: 90%;
     width: 100%;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: stretch;*/
-    /*align-items: center;*/
 }
 
 .divider{
-    /*width: 50%;*/
     height: 100%;
-    /*border: darkred solid 1px;*/
     display: flex;
     justify-content: center;
 }
@@ -742,7 +618,6 @@ button:hover{
 .wrapper .one{
     width: 55%;
 }
-
 
 .wrapper .two{
     width: 45%;
@@ -775,17 +650,12 @@ button:hover{
 
 #back-btn-wrapper{
     justify-content: flex-start;
-    /*height: 20%;*/
-    /*margin-top: 20px;*/
     margin-left:  20px;
 
 }
 
 #back-btn-wrapper div{
     justify-content: flex-start;
-    /*height: 20%;*/
-    /*margin-top: 20px;*/
-    /*margin-left:  20px;*/
     cursor: pointer;
 }
 
@@ -838,7 +708,6 @@ button:hover{
     border: #ffe682 solid 2px;
     display: flex;
     justify-content: flex-end;
-    /*align-items: center;*/
     flex-direction: column;
 }
 
@@ -874,10 +743,6 @@ button:hover{
     height: 100%;
 }
 
-#add-bot{
-    /*float: bottom;*/
-    height: 10%;
-}
 
 .ready-list{
     height: 80%;
@@ -896,16 +761,10 @@ button:hover{
 .cm-el li .player-type{
     width: 30px;
     height: 100%;
-    /*margin: 3px;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin: 0;*/
 }
-
-/*.fa-user-circle{*/
-    /*margin-left: 6px;*/
-/*}*/
 
 .enter-btn:hover, .create-btn:hover{
     transition: 0.3s;
@@ -917,13 +776,6 @@ button:hover{
     transition: 0.3s;
     background-color: #186ca3;
 }
-
-/*#back-btn-wrapper div:hover ~ #back-btn-wrapper i, #back-btn-wrapper span{*/
-    /*transition: 0.3s;*/
-    /*text-shadow: 1px 1px 0 #186ca3;*/
-    /*cursor: pointer;*/
-/*}*/
-
 
 .rooms ul{
     max-height: 100%;
@@ -966,19 +818,7 @@ button:hover{
         position: relative;
     }
 
-    /*.auth-container, auth-row{*/
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
-        /*width: 100%;*/
-        /*height: 100%;*/
-        /*margin: 0;*/
-        /*padding: 0;*/
-        /*!*position: fixed;*!*/
-    /*}*/
-
     .center-block{
-        /*position: absolute;*/
         margin: 0;
         height: 100%;
         width: 100%;
@@ -986,7 +826,6 @@ button:hover{
 
 
     #main-block{
-        /*width: 100%;*/
         height: 100%;
         margin: 0;
         padding: 0;
@@ -1034,7 +873,6 @@ button:hover{
         font-size: 22px;
         display: flex;
         justify-content: center;
-        /*align-items: flex-start;*/
         flex-direction: row;
         width: 100%;
         margin: 0;
@@ -1046,10 +884,6 @@ button:hover{
 
     .wrapper .two #section-name{
         margin-top: 5px;
-    }
-
-    .wrapper .two #add-bot{
-        height: 20%;
     }
 
     .wrapper .divider-elements{
@@ -1068,7 +902,6 @@ button:hover{
         overflow-y: auto;
     }
 }
-
 
 .wrapper .one #room-link{
     cursor: pointer;
@@ -1089,15 +922,11 @@ button:hover{
 }
 
 .interface #title #game-rooms{
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     margin-left: 30px;
 }
 
 .burger{
     float: right;
-    /*margin-right: 30px;*/
     margin-top: 10px;
 }
 
@@ -1121,12 +950,6 @@ button:hover{
     }
 }
 
-/*@media screen and (max-width: 719px) {*/
-    /*#chat-block{*/
-        /*transform: scale(0.8);*/
-    /*}*/
-/*}*/
-
 .burger{
     cursor: pointer;
 }
@@ -1145,9 +968,6 @@ button:hover{
     padding: 0;
 }
 
-/*.center-block{*/
-    /*margin: 0;*/
-/*}*/
  #chat-block{
      max-height: 100vh;
  }
@@ -1157,12 +977,6 @@ button:hover{
      height: 42.5%;
      margin-top: 0;
  }
-
- .players-ready #add-bot{
-     height: 20%;
-     /*margin: 0;*/
- }
-
  .two{
      flex-direction: column;
  }
@@ -1186,10 +1000,6 @@ button:hover{
 
  .ready-list{
      overflow-y: auto;
- }
-
- .packages #add-bot{
-     height: 23%;
  }
 
  .packages li{
@@ -1218,7 +1028,6 @@ button:hover{
 #profile-tab .avatar{
     font-size: 26px;
     margin-right: 15px;
-    /*margin-left: 5px;*/
 }
 
 #profile-tab span, #profile-tab .avatar{
@@ -1241,9 +1050,6 @@ button:hover{
     height: 300px;
 }
 
-.ready-list #add-bot{
-    height: 10%;
-}
 
 .package-manager .ready-list{
     height: 90%;
@@ -1260,7 +1066,7 @@ button:hover{
 }
 
 .package-manager #add-bot{
-    height: 10%;
+    height: 100%;
     width: 50%;
     display: inline-block;
 }
@@ -1271,24 +1077,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /*display: inline-block;*/
 }
-
-/*.package-manager .players-ready{*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: flex-end;*/
-    /*align-items: center;*/
-/*}*/
-
-/*.manager-btns button{*/
-    /*margin: 0;*/
-    /*border: 1px black;*/
-/*}*/
-
-/*.manager-btns #add-bot{*/
-    /*border: 1px black;*/
-/*}*/
 
 .package-uploader{
     display: flex;
@@ -1316,7 +1105,6 @@ button:hover{
 .upload-file input{
     color: #ffe682;
     background-color: transparent;
-    /*border: 1px solid #ffe682;*/
     padding: 5px 10px 6px 7px;
     font-family: SI, serif;
     text-shadow: 1px 1px 0 #000;
@@ -1400,6 +1188,3 @@ html {
 .manager-name{
     margin-left: auto;
 }
-
-
-
