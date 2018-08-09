@@ -566,7 +566,7 @@ button{
     cursor: pointer;
 }
 
-#add-bot button{
+.cm-el button{
     color: #ffe682;
     background-color: transparent;
     border: 1px solid #ffe682;
@@ -593,7 +593,7 @@ button{
     background-color: #186ca3;
 }
 
-#add-bot button:hover{
+.add-bot button:hover{
     transition: 0.3s;
     background-color: #186ca3;
 }
@@ -754,7 +754,7 @@ button:hover{
     padding-top: 2px;
 }
 
-.cm-el #add-bot-btn{
+.cm-el .text{
     font-size: 24px;
 }
 
@@ -882,7 +882,7 @@ button:hover{
         height: 80%;
     }
 
-    .wrapper .two #section-name{
+    .wrapper .two .section-name{
         margin-top: 5px;
     }
 
@@ -1065,7 +1065,7 @@ button:hover{
     margin-bottom: 20px;
 }
 
-.package-manager #add-bot{
+.package-manager .add-bot{
     height: 100%;
     width: 50%;
     display: inline-block;
@@ -1187,4 +1187,8 @@ html {
 
 .manager-name{
     margin-left: auto;
+}
+
+.add-package, .del-package{
+    width: 100%;
 }
