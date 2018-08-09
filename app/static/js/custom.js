@@ -13,12 +13,10 @@ $(document).ready(function () {
     let headings = $('.headings');
     let chatBlock = $('#chat-block');
     let burger = $('.burger');
-    // let roomsBlock = $('#rooms-block');
     let avatarUploader = $('.avatar-uploader');
     let avatar = $('.avatar');
     let packageUploader = $('.package-uploader');
     let addPackage = $('.add-package');
-    // let delPackage = $('.del-package');
 
     packageUploader.hide();
 
@@ -74,50 +72,12 @@ $(document).ready(function () {
                                function () {$(this).css({'background-color':'#5a95e2'})});
     });
 
-    // $('.packages li').hover(function () {$(this).css({'background-color':'#186ca3', 'transition':'0.3s'});},
-    //                            function () {$(this).css({'background-color':'#5a95e2'})});
-
     $('.packages li').click(function () {
         $('.packages li').removeClass('selected');
         $('#' + this.id).toggleClass('selected');
     });
 
-    // $('.package-manager li').click(function () {
-    //     $('.packages li').removeClass('selected');
-    //     $('#' + this.id).toggleClass('selected');
-    // });
-    // if ($('.packages li').hasClass('selected')){
-    //     $('.packages li:hover').hover(function () {$(this).css({'background-color':'#633bf3'});},
-    //                            function () {$(this).css({'background-color':'#633bf3'})});
-    // }
-
-    // burger.hide();
-
-    // $(window).resize(function () {
-        //if ($(window).width() <= 990)
-        // if(window.matchMedia('(max-width: 990px)').matches){
-        //     // chatBlock.hide();
-        //     burger.show();
-        //
-        //     // createBtn.click(function () {
-        //     //     $('.creation-menu .wrapper').css({'display':'flex', 'justify-content':'center', 'align-items':'flex-start', 'flex-direction':'column'});
-        //     // });
-        //     // roomsBlock.append(chatBlock);
-        //     // chatBlock.width = '100%';
-        //     // chatBlock.height = '100%';
-        //
-        //
-        // }
-
-
-    // });
-
     burger.click(function () {
-                // chatBlock.removeClass('col-lg-4');
-                // chatBlock.toggleClass('col-lg-9');
-                // roomsBlock.hide();
-                // chatBlock.width = '100%';
-                // chatBlock.height = '100%';
                 chatBlock.toggle();
             });
 
@@ -144,8 +104,6 @@ $(document).ready(function () {
                                     });
 
 
-
-
     $('#room-link').click(function () {
         $(this).select();
         document.execCommand("copy");
@@ -158,6 +116,5 @@ $(document).ready(function () {
     $('.close-btn').click(function () {
         packageUploader.hide();
     });
-
 
 });
