@@ -65,11 +65,12 @@ $(document).ready(function () {
     $('#enter-room').attr('disabled', true);
 
     room.click(function () {
+        let enterRoom = $('#enter-room');
         room.removeClass('selected');
         $('#' + this.id).toggleClass('selected');
-        $('#enter-room').attr('disabled', false);
-        $('#enter-room').css({'background-color': '#5a95e2'});
-        $('#enter-room').hover(function () {$(this).css({'background-color':'#186ca3', 'transition':'0.3s'});},
+        enterRoom.attr('disabled', false);
+        enterRoom.css({'background-color': '#5a95e2'});
+        enterRoom.hover(function () {$(this).css({'background-color':'#186ca3', 'transition':'0.3s'});},
                                function () {$(this).css({'background-color':'#5a95e2'})});
     });
 
