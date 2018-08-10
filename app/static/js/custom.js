@@ -117,4 +117,26 @@ $(document).ready(function () {
         packageUploader.hide();
     });
 
+    $('.upload-package button').click(function () {
+        let fileForm = $('#upload-package');
+        let fileInput = fileForm.find('input[name="gamepack"]');
+        let fd = new FormData();
+
+        fd.append('gamepack', fileInput.prop('files')[0]);
+
+        $.ajax({
+            url: '/upload_pack',
+            data: fd,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (data) {
+                let taskId = data['task_id'];
+                $.getJSON('/get_status/' + taskId, function (data) {
+                    console.log(data['result']+'\n'+data['state'])
+                })
+            }
+        });
+    })
+
 });
