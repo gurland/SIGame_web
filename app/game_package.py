@@ -1,8 +1,5 @@
 from bs4 import BeautifulSoup
 from uuid import uuid4
-from xml.sax.handler import ContentHandler
-from xml.sax import make_parser
-from xml.sax._exceptions import SAXParseException
 
 
 class ParsingError(Exception):
@@ -17,15 +14,9 @@ class ValidationError(ParsingError):
     pass
 
 
-class Package:
-    def __init__(self, xml_file):
-        self._is_well_formed(xml_file)
-
-        with open(xml_file, encoding="utf8") as content:
-            xml_markup = content.read()
-            content.close()
-
-        self.soup = BeautifulSoup(xml_markup, 'lxml')
+class GamePackage:
+    def __init__(self, xml):
+        self.soup = BeautifulSoup(xml, 'lxml')
         self.root = self.soup.find('package')
 
         if not self.root:
@@ -46,18 +37,9 @@ class Package:
         self.id = self.root.get('id', str(uuid4()))
         self.restriction = self.root.get('restriction', '')
 
-    @staticmethod
-    def _is_well_formed(xml_file):
-        parser = make_parser()
-        parser.setContentHandler(ContentHandler())
-        try:
-            parser.parse(xml_file)
-        except SAXParseException:
-            raise ValidationError('XML is not well-formed')
-
     def to_dict(self):
         package_rounds = []
-        package_dict = {'id': self.id,
+        package_dict = {'_id': self.id,
                         'name': self.name,
                         'date': self.date,
                         'version': self.version,
@@ -145,7 +127,8 @@ class Package:
 
     def get_media_link(self, atom_type, atom_content):
         if atom_content.startswith('@'):
-            return f'/media/{self.id}/{atom_type}/{atom_content[1:]}'
+            media_type_dirs = {'image': 'Images', 'voice': 'Audio', 'video': 'Video'}
+            return f'/media/{self.id}/{media_type_dirs[atom_type]}/{atom_content[1:]}'
         else:
             return atom_content
 
