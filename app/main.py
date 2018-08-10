@@ -1,10 +1,14 @@
-from flask import Flask, render_template, redirect, request, url_for, flash, abort
-from flask_login import LoginManager, login_user, current_user
-from peewee import DoesNotExist
+import os
+from uuid import uuid4
 
 from models import User
 from utils import confirm_token, generate_confirmation_token
-from tasks import send_activation_email
+from tasks import send_activation_email, add_package
+
+from flask import Flask, render_template, redirect, request, url_for, flash, abort, jsonify
+from flask_login import LoginManager, login_user, current_user, login_required, current_user
+from peewee import DoesNotExist
+from celery.result import AsyncResult
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -116,4 +120,34 @@ def activate_user(confirmation_token):
         flash('Успешно активирован ваш аккаунт! Авторизируйтесь')
         return redirect(url_for('index'))
     else:
-        abort(404)
+        return abort(404)
+
+
+@app.route('/upload_pack', methods=['POST'])
+@login_required
+def upload_pack():
+    try:
+        user = User.get(id=current_user.id)
+    except User.DoesNotExist:
+        return abort(401)
+
+    if 'gamepack' not in request.files:
+        print(request.files)
+        return abort(404)
+
+    file = request.files['gamepack']
+
+    if file and file.filename.endswith('.siq'):
+        pack_unique_filename = f'{str(uuid4())}.siq'
+        pack_file_path = os.path.join(app.config['TEMP_FOLDER'], pack_unique_filename)
+        file.save(pack_file_path)
+        task = add_package.delay(pack_file_path, user.id)
+        return jsonify({'task_id': task.id})
+
+
+@app.route('/get_status/<string:task_id>')
+@login_required
+def get_status(task_id):
+    async_result = AsyncResult(task_id)
+    result = async_result.get(timeout=30)
+    return jsonify({'result': result, 'state': async_result.state})
