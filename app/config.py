@@ -9,3 +9,6 @@ SMTP_PORT = 587
 SMTP_EMAIL = 'xxx@gmail.com'
 SMTP_LOGIN = 'xxx'
 SMTP_PASSWORD = 'xxx'
+
+TEMP_FOLDER = '/tmp/siweb'
+MEDIA_FOLDER = '/media'
