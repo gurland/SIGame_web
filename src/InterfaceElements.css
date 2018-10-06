@@ -1,0 +1,12 @@
+button{
+    width: 100%;
+    height: 100%;
+    color: #ffe682;
+    background-color: #5a95e2;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18px;
+}
+

@@ -5,5 +5,9 @@ export default class SignForm extends Component{
     constructor(props){
         super(props);
     }
+
+    render() {
+        //TODO: Make sign up form
+    }
 }
 
