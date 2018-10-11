@@ -7,8 +7,8 @@ class Button extends Component{
     constructor(props){
         super(props);
 
-        // this.state = {isClicked: false};
-        this.handleClick = this.handleClick.bind(this);
+        this.state = {isToggledOn: false};
+        this.handleToggle = this.handleToggle.bind(this);
     }
 
     render(){
@@ -17,8 +17,11 @@ class Button extends Component{
         )
     }
 
-    handleClick(){
-        //TODO: Add click handler
+    handleToggle(){
+        //TODO: Add toggle handler
+        this.setState(() => ({
+            isToggledOn: !(this.state.isToggledOn)
+        }));
     }
 
 }

@@ -10,3 +10,19 @@ button{
     font-size: 18px;
 }
 
+body{
+    background: linear-gradient(to bottom, #000451 0%, #183cf3 50%, #000451 100%);
+    min-height:100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@font-face{
+    font-family:SI;
+    src: url('fonts/FuturaC.woff') format('woff');
+    font-weight: normal;
+    font-style:normal;
+}
