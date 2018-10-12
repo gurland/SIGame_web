@@ -12,3 +12,10 @@
     background-color: #5a95e2;
 }
 
+.title{
+    padding-top: 10px;
+    font-family: SI, serif;
+    font-size: 30pt;
+    color: #ffe682;
+    text-shadow: 1px 1px 0 #000;
+}

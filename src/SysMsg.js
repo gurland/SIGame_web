@@ -1,6 +1,8 @@
 import {Component} from "react";
 import React from "react";
 
+import './SysMsg.css'
+
 export default class SysMsg extends Component{
     constructor(props){
         super(props);
@@ -8,8 +10,8 @@ export default class SysMsg extends Component{
 
     render() {
         return (
-            <div>
-                <span style={{color: "red"}}></span>
+            <div id={'warnings-block'}>
+                <span>Введен неправальный пароль!</span>
             </div>
         ); //TODO: Add different variants of warnings
     }
