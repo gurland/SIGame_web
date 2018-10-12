@@ -1,6 +1,7 @@
-import {Input, Button, SysMsg} from './InterfaceElements'
 import Form from './Form'
 import React, {Component} from 'react'
+
+import './SignForm.css'
 
 export default class SignForm extends Component{
     constructor(props){
@@ -12,9 +13,7 @@ export default class SignForm extends Component{
         return (
             <div className={'sign-form'}>
                 <span className={'title'} id={'si-title'}>СИ Онлайн</span>
-                <span className={'title'} id={'form-title'}>Регистрация</span>
-
-                <Form/>
+                <Form />
             </div>
         )
     }
