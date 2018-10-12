@@ -19,3 +19,11 @@
     color: #ffe682;
     text-shadow: 1px 1px 0 #000;
 }
+
+#reg-auth-switches{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}

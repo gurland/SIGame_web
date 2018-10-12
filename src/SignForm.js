@@ -1,6 +1,7 @@
 import Form from './Form'
 import SysMsg from './SysMsg'
 import React, {Component} from 'react'
+import Button from './Button'
 
 import './SignForm.css'
 
@@ -16,6 +17,10 @@ export default class SignForm extends Component{
                 <span className={'title'} id={'si-title'}>СИ Онлайн</span>
                 <Form />
                 <SysMsg/>
+                <div id={'reg-auth-switches'}>
+                    <Button btnId={'switch-to-auth'} btnText={'Авторизация'}/>
+                    <Button btnId={'switch-to-reg'} btnText={'Регистрация'}/>
+                </div>
             </div>
         )
     }
