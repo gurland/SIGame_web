@@ -11,7 +11,7 @@ export default class SysMsg extends Component{
     render() {
         return (
             <div id={'warnings-block'}>
-                <span>Введен неправальный пароль!</span>
+                <span>Error message here!</span>
             </div>
         ); //TODO: Add different variants of warnings
     }

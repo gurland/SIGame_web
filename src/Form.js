@@ -8,16 +8,24 @@ import './Form.css'
 export default class Form extends Component{
     regBox = (
         <div id={'reg-box'}>
-            <Input inputType={'text'}/>
-            <Input inputType={'email'}/>
-            <Input inputType={'password'}/>
+            <Input inputType={'text'}
+                   inputText={'Логин'}/>
+
+            <Input inputType={'email'}
+                   inputText={'Электронный адрес'}/>
+
+            <Input inputType={'password'}
+                   inputText={'Пароль'}/>
         </div>
     );
 
     authBox = (
         <div id={'auth-box'}>
-            <Input inputType={'text'}/>
-            <Input inputType={'password'}/>
+            <Input inputType={'text'}
+                   inputText={'Логин'}/>
+
+            <Input inputType={'password'}
+                   inputText={'Пароль'}/>
         </div>
     );
 
