@@ -8,6 +8,26 @@ import './SignForm.css'
 export default class SignForm extends Component{
     constructor(props){
         super(props);
+
+        this.state = {beingShowedNow: 'auth'};
+        this.showAuthBox = this.showAuthBox.bind(this);
+        this.showRegBox = this.showRegBox.bind(this);
+    }
+
+    showAuthBox(){
+        if ('auth' !== this.state.beingShowedNow) {
+            this.setState(() => ({
+                beingShowedNow: 'auth'
+            }));
+        }
+    }
+
+    showRegBox(){
+        if ('reg' !== this.state.beingShowedNow) {
+            this.setState(() => ({
+                beingShowedNow: 'reg'
+            }));
+        }
     }
 
     render() {
@@ -15,11 +35,15 @@ export default class SignForm extends Component{
         return (
             <div className={'sign-form'}>
                 <span className={'title'} id={'si-title'}>СИ Онлайн</span>
-                <Form />
+                <Form formType={this.state.beingShowedNow}/>
                 <SysMsg/>
                 <div id={'reg-auth-switches'}>
-                    <Button btnId={'switch-to-auth'} btnText={'Авторизация'}/>
-                    <Button btnId={'switch-to-reg'} btnText={'Регистрация'}/>
+                    <Button btnId={'switch-to-auth'}
+                            btnText={'Авторизация'}
+                            onBtnClick={this.showAuthBox}/>
+                    <Button btnId={'switch-to-reg'}
+                            btnText={'Регистрация'}
+                            onBtnClick={this.showRegBox}/>
                 </div>
             </div>
         )
