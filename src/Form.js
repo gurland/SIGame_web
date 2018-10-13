@@ -28,9 +28,9 @@ export default class Form extends Component{
     render() {
         return(
             <div className={'reg-auth-form'}>
-                {'reg' === !this.props.formType ? this.authBox : this.regBox}
+                {this.props.formType === 'auth' ? this.authBox : this.regBox}
                 <Button btnText={
-                            'reg' === !this.props.formType ? 'Войти' : 'Зарегистрироваться'
+                            this.props.formType === 'auth' ? 'Войти' : 'Зарегистрироваться'
                         }/>
             </div>
         )

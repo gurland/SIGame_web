@@ -4,8 +4,24 @@ import React, {Component} from 'react'
 import Button from './Button'
 
 import './SignForm.css'
+import Input from "./Input";
 
 export default class SignForm extends Component{
+    regBox = (
+        <div id={'reg-box'}>
+            <Input inputType={'text'}/>
+            <Input inputType={'email'}/>
+            <Input inputType={'password'}/>
+        </div>
+    );
+
+    authBox = (
+        <div id={'auth-box'}>
+            <Input inputType={'text'}/>
+            <Input inputType={'password'}/>
+        </div>
+    );
+
     constructor(props){
         super(props);
 
@@ -35,7 +51,7 @@ export default class SignForm extends Component{
         return (
             <div className={'sign-form'}>
                 <span className={'title'} id={'si-title'}>СИ Онлайн</span>
-                <Form formType={this.state.beingShowedNow}/>
+                {<Form formType={this.state.beingShowedNow}/>}
                 <SysMsg/>
                 <div id={'reg-auth-switches'}>
                     <Button btnId={'switch-to-auth'}
