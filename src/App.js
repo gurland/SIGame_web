@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SignForm from './SignForm'
+import SignForm from './auth-page/SignForm'
 
 export default class App extends Component{
 

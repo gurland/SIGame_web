@@ -1,7 +1,7 @@
 import {Component} from "react";
 import React from "react";
-import Button from './Button'
-import Input from './Input'
+import Button from '../Button'
+import Input from '../Input'
 
 import './Form.css'
 
