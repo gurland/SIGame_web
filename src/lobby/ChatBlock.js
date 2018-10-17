@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './ChatBlock.css'
+
 export default class ChatBlock extends Component{
     constructor(props) {
         super(props);
@@ -8,7 +10,7 @@ export default class ChatBlock extends Component{
 
     render() {
         return (
-            <div>
+            <div className={'main-menu-element'} id={'chat'}>
 
             </div>
         );

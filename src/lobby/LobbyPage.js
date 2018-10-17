@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import RoomList from './RoomList'
 import ChatBlock from './ChatBlock'
+import './LobbyPage.css'
 
 export default class LobbyPage extends Component{
     constructor(props) {
