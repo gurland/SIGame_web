@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Button from '../Button'
 
+import Button from '../Button'
+import Room from './Room'
 import './RoomList.css'
 
 export default class RoomList extends Component{
@@ -13,10 +14,14 @@ export default class RoomList extends Component{
         return (
             <div className={'main-menu-element'} id={'rooms'}>
                 <div id={'header'}>
-                    <span className={'block-title'} id={'list-title'}>Игровые комнаты</span>
+                    <span className={'block-title'} id={'room-list-title'}>
+                        Игровые комнаты
+                    </span>
                 </div>
                 <div id={'rooms-list'}>
-
+                    <ul>
+                        <Room/>
+                    </ul>
                 </div>
                 <div id={'buttons'}>
                     <Button btnText={'Войти в комнату'}/>

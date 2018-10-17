@@ -12,12 +12,8 @@
     height: 10%;
 }
 
-#list-title{
-    text-align: center;
-    font-family: SI, serif;
-    text-shadow: 1px 1px 0 #000;
-    font-size: 36px;
-    color: #ffe682;
+#room-list-title{
+
 }
 
 #rooms-list{
@@ -43,4 +39,9 @@
     height: 100%;
 
     font-size: 18pt;
+}
+
+#rooms-list ul{
+    margin: 0px;
+    padding: 0px;
 }
