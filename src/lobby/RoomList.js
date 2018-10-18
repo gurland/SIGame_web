@@ -18,6 +18,15 @@ export default class RoomList extends Component{
                         Игровые комнаты
                     </span>
                 </div>
+                <div className={'column-headings-block'}>
+                    <table>
+                        <tr>
+                            <td className={'column-heading'}>Название комнаты</td>
+                            <td className={'column-heading'}>Название пакета</td>
+                            <td className={'column-heading'}>Количество игроков</td>
+                        </tr>
+                    </table>
+                </div>
                 <div id={'rooms-list'}>
                     <ul>
                         <Room/>

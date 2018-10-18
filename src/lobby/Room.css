@@ -3,3 +3,7 @@
     justify-content: flex-start;
     padding: 0;
 }
+
+.room-element{
+    margin: 10pt;
+}
