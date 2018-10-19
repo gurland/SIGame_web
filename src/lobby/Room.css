@@ -1,9 +1,44 @@
 .room{
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0;
+    margin-bottom: 5pt;
+    border: blue solid 1px;
+    width: 100%;
+    justify-items: flex-start;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #111111;
+}
+
+.room:hover{
+    background-color: #4b3291;
 }
 
 .room-element{
     margin: 10pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20pt;
+    text-align: center;
+}
+
+.is-locked{
+    width: 5%;
+}
+
+.room-name{
+    width: 35%;
+}
+
+.room-package{
+    width: 40%;
+}
+
+.players{
+    width: 20%;
 }
