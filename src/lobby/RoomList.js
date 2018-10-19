@@ -34,6 +34,14 @@ export default class RoomList extends Component{
                         <Room/>
                         <Room/>
                         <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
+                        <Room/>
                     </ul>
                 </div>
                 <div id={'buttons'}>

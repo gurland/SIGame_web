@@ -17,6 +17,7 @@
     height: 75%;
     padding: 5pt 2pt 2pt;
     background-color: #c3d2e2;
+    overflow: auto;
 }
 
 #rooms #buttons{
