@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import RoomList from './RoomList'
-import ChatBlock from './ChatBlock'
+import ChatProfileBlock from './ChatProfileBlock'
 import './LobbyPage.css'
 
 export default class LobbyPage extends Component{
@@ -14,7 +14,7 @@ export default class LobbyPage extends Component{
         return (
             <div id={'main-menu'}>
                 <RoomList/>
-                <ChatBlock/>
+                <ChatProfileBlock/>
             </div>
         );
     }
