@@ -30,23 +30,18 @@ export default class RoomList extends Component{
                 </div>
                 <div id={'rooms-list'}>
                     <ul>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
-                        <Room/>
+                        <Room roomId={'1'}/>
+                        <Room roomId={'2'}/>
+                        <Room roomId={'3'}/>
+                        <Room roomId={'4'}/>
+                        <Room roomId={'5'}/>
+                        <Room roomId={'6'}/>
+                        <Room roomId={'7'}/>
                     </ul>
                 </div>
                 <div id={'buttons'}>
-                    <Button btnText={'Войти в комнату'}/>
-                    <Button btnText={'Создать комнату'}/>
+                    <Button btnText={'Войти в комнату'} isDisabled={true}/>
+                    <Button btnText={'Создать комнату'} isDisabled={true}/>
                 </div>
             </div>
         );

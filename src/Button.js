@@ -12,6 +12,7 @@ export default class Button extends Component{
         return(
             <button
                 onClick={this.props.onBtnClick}
+                disabled={this.props.isDisabled}
                 className={this.props.btnClass}
                 id={this.props.btnId}
             >
