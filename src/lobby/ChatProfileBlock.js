@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import ChatBlockTabs from './ChatBlockTabs'
+import Tab from './Tab'
 import Chat from './Chat'
 import UserProfile from './UserProfile'
-import './ChatBlock.css'
+import './ChatProfileBlock.css'
 
 export default class ChatProfileBlock extends Component{
     constructor(props) {
@@ -16,8 +16,11 @@ export default class ChatProfileBlock extends Component{
 
     render() {
         return (
-            <div className={'main-menu-element'} id={'chat-block'}>
-                <ChatBlockTabs/>
+            <div className={'main-menu-element'} id={'chat-profile-block'}>
+                <div id={'chat-block-tabs'}>
+                    <Tab tabId={'chat-tab'} tabText={'Чат'}/>
+                    <Tab tabId={'profile-tab'} tabText={'Профиль'}/>
+                </div>
                 {this.state.activeTab === 'chat' ? <Chat/> : <UserProfile/>}
             </div>
         );

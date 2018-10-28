@@ -12,6 +12,10 @@
     height: 10%;
 }
 
+#rooms #header span{
+    margin: 0;
+}
+
 #rooms-list{
     width: 100%;
     height: 75%;
