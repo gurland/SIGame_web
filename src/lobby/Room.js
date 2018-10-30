@@ -13,12 +13,10 @@ export default class Room extends Component{
     }
 
     onRoomClick(){ //TODO: Fix bug - while repeated click on room it's not selected
-        const selectedRooms = document.getElementsByClassName('selected');
+        let selectedRooms = document.getElementsByClassName('selected');
 
         if(selectedRooms) {
-            for (let room of selectedRooms) {
-                room.className = `room ${this.state.isSelected === true ? 'selected' : null}`;
-            }
+            selectedRooms[0].className = `room ${this.state.isSelected === true ? 'selected' : null}`;
         }
 
         this.setState({

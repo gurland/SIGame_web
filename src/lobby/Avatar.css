@@ -1,0 +1,33 @@
+#avatar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#avatar #avatar-image{
+    font-size: 96pt;
+    margin: 25pt 25pt 7pt;
+}
+
+#avatar #load-avatar-button{
+    display: none;
+    height: 0;
+    width: 100%;
+    background-color: #111111;
+    opacity: 0;
+    position: absolute;
+    bottom: inherit;
+}
+
+.showed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30%;
+    opacity: 0.8;
+
+    transition: 0.2s;
+}
+
