@@ -24,7 +24,7 @@ export default class UserProfile extends Component{
                 <form action="" className={'profile-element'} id={'upload-package'}>
                     <div id={'package-info'}>
                         <input type="text" id={'package-name'} placeholder={'Имя пакета'}/>
-                        <input type="file" id={'choose-file'}/>
+                        <input type="file" id={'choose-file'} accept={'.siq'}/>
                     </div>
                     <Button btnClass={'form-element'} btnId={'upload-package-btn'} btnText={'Загрузить пакет'}/>
                 </form>

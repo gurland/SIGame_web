@@ -27,13 +27,23 @@ export default class Avatar extends Component{
 
     render() {
         return (
-            <div className={'profile-element'} id="avatar">
+            <div className={'profile-element'}
+                 id="avatar"
+                 onMouseEnter={this.handleHover}
+                 onMouseLeave={this.handleHover}>
                 <i className="fas fa-user avatar"
-                   id={'avatar-image'}
-                   onMouseEnter={this.handleHover}
-                   onMouseLeave={this.handleHover}/>
-                <div className={this.state.isBeingHovered ? 'showed' : null} id="load-avatar-button">
-                    <a href="#">Загрузить изображение</a>
+                   id={'avatar-image'}/>
+                <div className={this.state.isBeingHovered ? 'showed' : 'hidden'}
+                     id="load-avatar-button">
+                    <a href="#">
+                        <span style={this.state.isBeingHovered
+                                        ? { color: '#ffe682',
+                                            transition: '0.4s'}
+                                        : { color: 'transparent'}}
+                        >
+                            Загрузить
+                        </span>
+                    </a>
                 </div>
             </div>
         );
