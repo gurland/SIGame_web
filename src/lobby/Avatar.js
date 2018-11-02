@@ -16,7 +16,6 @@ export default class Avatar extends Component{
 
     handleHover(){
         this.setState(this.toggleHoverState);
-        console.log(this.state.isBeingHovered);
     }
 
     toggleHoverState(){

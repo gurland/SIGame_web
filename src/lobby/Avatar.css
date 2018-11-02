@@ -24,7 +24,6 @@
 
 #load-avatar-button span:hover{
     font-size: 15pt;
-    text-shadow: 1pt 1pt 0 #000;
 }
 
 .hidden{

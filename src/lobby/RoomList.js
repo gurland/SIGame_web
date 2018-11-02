@@ -8,6 +8,24 @@ export default class RoomList extends Component{
     constructor(props){
         super(props);
 
+        this.handleRoomClick = this.handleRoomClick.bind(this);
+        this.currentSelectedElementId = 0;
+    }
+
+    handleRoomClick(e, id){
+        let currentSelectedElement = document.getElementById(this.currentSelectedElementId);
+
+        if (currentSelectedElement){
+            currentSelectedElement.className = 'room';
+            console.log(currentSelectedElement);
+        } else {
+            // console.log(e.target.id);
+        }
+
+        currentSelectedElement = document.getElementById(id);
+        console.log(id);
+        console.log(e);
+        // currentSelectedElement.className = 'room selected';
     }
 
     render() {
@@ -30,13 +48,13 @@ export default class RoomList extends Component{
                 </div>
                 <div id={'rooms-list'}>
                     <ul>
-                        <Room roomId={'1'}/>
-                        <Room roomId={'2'}/>
-                        <Room roomId={'3'}/>
-                        <Room roomId={'4'}/>
-                        <Room roomId={'5'}/>
-                        <Room roomId={'6'}/>
-                        <Room roomId={'7'}/>
+                        <Room roomId={'1'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'2'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'3'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'4'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'5'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'6'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
+                        <Room roomId={'7'} onRoomClick={e => this.handleRoomClick(e, this.id)}/>
                     </ul>
                 </div>
                 <div id={'buttons'}>
