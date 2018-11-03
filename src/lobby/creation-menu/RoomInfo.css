@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-#room-info #section-title{
+#room-info .section-title{
     margin-bottom: 5pt;
     margin-top: 30pt;
 
@@ -19,7 +19,6 @@
     width: 80%;
     height: 30pt;
 
-    /*margin: 10pt;*/
     font-size: 14pt;
 }
 

@@ -15,8 +15,8 @@ export default class CreationMenu extends Component{
                         <RoomInfo/>
                     </div>
                     <div className={'menu-divider'} id={'right-divider'}>
-                        {/*<PlayersList/>*/}
-                        {/*<PackagesList/>*/}
+                        <PlayersList/>
+                        <PackagesList/>
                     </div>
                 </div>
                 <Button id={'start-game-button'} btnText={'Запустить игру'}/>

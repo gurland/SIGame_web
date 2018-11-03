@@ -13,7 +13,7 @@ export default class RoomInfo extends Component{
     render() {
         return (
             <div id={'room-info'}>
-                <span id={'section-title'}>Создание комнаты</span>
+                <span className={'section-title'}>Создание комнаты</span>
                 <input type="text" id={'new-room-name'} placeholder={'Название комнаты'}/>
                 <input type="text" id={'new-room-password'} placeholder={'Пароль'}/>
                 <span>Ссылка на комнату</span>
