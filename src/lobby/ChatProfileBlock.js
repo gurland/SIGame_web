@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import Tab from './Tab'
-import Chat from './Chat'
-import UserProfile from './UserProfile'
+import Chat from './chat/Chat'
+import UserProfile from './user-profile/UserProfile'
 import './ChatProfileBlock.css'
 
 export default class ChatProfileBlock extends Component{

@@ -27,9 +27,10 @@ export default class Room extends Component{
 
     render() {
         return (
-            <li className={'room'}
+            <li className={this.props.roomClass}
                 id={this.props.roomId}
-                onClick={this.props.onRoomClick}>
+                onClick={this.props.onRoomClick}
+            >
                 <div className="room-element is-locked"><i className="fas fa-lock"/></div>
                 <div className="room-element room-name"><span>Саня, ты в порядке?</span></div>
                 <div className="room-element room-package"><span>Аниме пак</span></div>

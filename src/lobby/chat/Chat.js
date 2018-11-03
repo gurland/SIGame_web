@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 
-import Button from '../Button'
+import Button from '../../Button'
 import './Chat.css'
 
 export default class Chat extends Component{
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         return (

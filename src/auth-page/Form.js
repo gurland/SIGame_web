@@ -29,10 +29,6 @@ export default class Form extends Component{
         </div>
     );
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return(
             <div className={'reg-auth-form'}>

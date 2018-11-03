@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 
-import Button from '../Button'
+import Button from '../../Button'
 import Avatar from './Avatar'
 import './UserProfile.css'
 
 export default class UserProfile extends Component{
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div id={'profile'}>
