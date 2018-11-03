@@ -1,3 +1,7 @@
+#room-link:hover{
+    text-decoration: none;
+}
+
 .room{
     display: flex;
     justify-content: flex-start;

@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+.tab:hover{
+    transition: 0.15s;
+    background-color: #186ca3;
+}
+
 .tab-title{
     margin: 0;
     padding: 0;

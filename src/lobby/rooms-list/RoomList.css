@@ -1,45 +1,16 @@
 #rooms{
-    height: 500pt;
-    width: 600pt;
-}
-
-#rooms #header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    height: 90%;
     width: 100%;
-    height: 10%;
-}
-
-#rooms #header span{
-    margin: 0;
 }
 
 #rooms-list{
     width: 100%;
-    height: 75%;
+    height: 95%;
     padding: 5pt 2pt 2pt;
     background-color: #c3d2e2;
     overflow: auto;
 }
 
-#rooms #buttons{
-    width: 100%;
-    height: 10%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-#rooms #buttons button{
-    width: 50%;
-    height: 100%;
-
-    font-size: 18pt;
-}
 
 #rooms-list ul{
     margin: 0;
@@ -58,6 +29,7 @@
 
 .column-heading{
     border: #ffe682 solid 1px;
+    border-top: none;
     text-align: center;
 }
 
