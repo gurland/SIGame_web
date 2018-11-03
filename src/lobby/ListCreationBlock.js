@@ -18,6 +18,7 @@ export default class ListCreationBlock extends Component{
     }
 
     showCreationMenu(){
+
         this.setState({
             currentActiveTab: 'creation-menu'
         });
