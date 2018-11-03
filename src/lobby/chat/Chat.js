@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import Button from '../../Button'
 import './Chat.css'
 
 export default class Chat extends Component{
@@ -11,12 +10,9 @@ export default class Chat extends Component{
                 <div className={'chat-element'} id={'messages'}>
 
                 </div>
-                <div className={'chat-element'} id="message-field">
+                <form action="" className={'chat-element'} id="message-field">
                     <input type="text"/>
-                </div>
-                <div className={'chat-element'} id="send-msg-button">
-                    <Button btnText={'Отправить'}/>
-                </div>
+                </form>
             </div>
         );
     }
