@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import './Avatar.css'
+import LoadPopup from "./LoadPopup";
 
 export default class Avatar extends Component{
     constructor(props) {
@@ -32,18 +33,13 @@ export default class Avatar extends Component{
                  onMouseLeave={this.handleHover}>
                 <i className="fas fa-user avatar"
                    id={'avatar-image'}/>
-                <div className={this.state.isBeingHovered ? 'showed' : 'hidden'}
-                     id="load-avatar-button">
-                    <a href="#">
-                        <span style={this.state.isBeingHovered
-                                        ? { color: '#ffe682',
-                                            transition: '0.4s'}
-                                        : { color: 'transparent'}}
-                        >
-                            Загрузить
-                        </span>
-                    </a>
-                </div>
+                {this.state.isBeingHovered
+                    ? <LoadPopup popupClass={this.state.isBeingHovered ? 'showed' : 'hidden'}
+                                 popupStyle={this.state.isBeingHovered
+                                            ? { color: '#ffe682',
+                                                transition: '0.4s'}
+                                            : { color: 'transparent'}}/>
+                    : null}
             </div>
         );
     }

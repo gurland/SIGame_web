@@ -32,6 +32,15 @@
     overflow: auto;
 }
 
+#player-list-block #players-list ul{
+    width: 100%;
+    height: 100%;
+
+    list-style-type: none;
+    padding: 4pt;
+    margin: 0;
+}
+
 #player-list-block #add-bot-button{
     height: 10%;
     border: 0;

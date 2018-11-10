@@ -35,13 +35,13 @@
     align-items: center;
 
     overflow: auto;
+}
 
+#package-list-block #package-list ul{
+    width: 100%;
+    height: 100%;
+
+    list-style-type: none;
     padding: 4pt;
+    margin: 0;
 }
-
-#package-list-block #choose-package-button{
-    height: 10%;
-    border: 0;
-    border-top: #ffe682 solid 1pt;
-}
-
