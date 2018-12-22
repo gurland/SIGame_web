@@ -17,13 +17,6 @@ export default class UserProfile extends Component{
                     <input className={'form-element'} id={'new-pass'} type="password" placeholder={'Новый пароль'}/>
                     <Button btnClass={'form-element'} btnId={'change-pass-btn'} btnText={'Сменить пароль'}/>
                 </form>
-                <form action="" className={'profile-element'} id={'upload-package'}>
-                    <div id={'package-info'}>
-                        <input type="text" id={'package-name'} placeholder={'Имя пакета'}/>
-                        <input type="file" id={'choose-file'} accept={'.siq'}/>
-                    </div>
-                    <Button btnClass={'form-element'} btnId={'upload-package-btn'} btnText={'Загрузить пакет'}/>
-                </form>
             </div>
         );
     }

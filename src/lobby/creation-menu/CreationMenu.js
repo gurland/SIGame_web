@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import RoomInfo from './RoomInfo'
 import PlayersList from './PlayersList'
-import PackagesList from './PackagesList'
+import PackageUploader from './PackageUploader'
 import Button from '../../Button'
 import './CreationMenu.css'
 
@@ -16,7 +16,7 @@ export default class CreationMenu extends Component{
                     </div>
                     <div className={'menu-divider'} id={'right-divider'}>
                         <PlayersList/>
-                        <PackagesList/>
+                        <PackageUploader/>
                     </div>
                 </div>
                 <Button id={'start-game-button'} btnText={'Запустить игру'}/>

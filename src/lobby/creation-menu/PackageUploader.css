@@ -1,0 +1,27 @@
+
+
+#upload-package{
+    margin-top: 25pt;
+    border: #ffe682 solid 1pt;
+
+    width: 90%;
+    height: 30%;
+}
+
+#upload-package #package-info{
+    width: 90%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#package-info input{
+    width: 100%;
+    margin-bottom: 3pt;
+}
+
+#upload-package-btn{
+    margin-top: 7pt;
+}
