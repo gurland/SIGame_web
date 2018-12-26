@@ -33,11 +33,6 @@
     text-align: center;
 }
 
-.column-heading span{
-    margin: 0;
-    padding: 0;
-}
-
 #is-room-locked{
     width: 5%;
     border-right: 0;
@@ -48,11 +43,15 @@
     border-left: 0;
 }
 
-#room-name-heading span{
-    margin-left: 20pt;
+#package-name-headings{
+    width: 30%;
 }
 
 #players-amount-heading{
+    width: 10%;
+}
+
+#room-state{
     width: 20%;
 }
 

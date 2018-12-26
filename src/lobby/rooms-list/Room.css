@@ -23,8 +23,9 @@
 }
 
 .room-element{
-    margin: 10pt;
-
+    margin: 10pt 0;
+    padding-left: 5pt;
+    padding-right: 5pt;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,9 +42,13 @@
 }
 
 .room-package{
-    width: 40%;
+    width: 30%;
 }
 
 .players{
+    width: 10%;
+}
+
+.state{
     width: 20%;
 }

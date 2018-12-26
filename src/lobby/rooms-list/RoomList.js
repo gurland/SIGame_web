@@ -12,9 +12,10 @@ export default class RoomList extends Component{
                     <table>
                         <tr>
                             <td className={'column-heading'} id={'is-room-locked'}/>
-                            <td className={'column-heading'} id={'room-name-heading'}><span>Название комнаты</span></td>
-                            <td className={'column-heading'} id={'package-name-headings'}><span>Название пакета</span></td>
-                            <td className={'column-heading'} id={'players-amount-heading'}><span>Количество игроков</span></td>
+                            <td className={'column-heading'} id={'room-name-heading'}>Название комнаты</td>
+                            <td className={'column-heading'} id={'package-name-headings'}>Название пакета</td>
+                            <td className={'column-heading'} id={'players-amount-heading'}>Игроки</td>
+                            <td className={'column-heading'} id={'room-state'}>Состояние</td>
                         </tr>
                     </table>
                 </div>

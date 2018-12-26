@@ -8,10 +8,13 @@ export default class Room extends Component{
         return (
             <a id={'room-link'} href={this.props.roomLink}>
                 <li className={'room'} id={this.props.roomId}>
-                    <div className="room-element is-locked"><i className="fas fa-lock"/></div>
-                    <div className="room-element room-name"><span>Саня, ты в порядке?</span></div>
-                    <div className="room-element room-package"><span>Аниме пак</span></div>
-                    <div className="room-element players"><span>2/3</span></div>
+                    <i className="fas fa-lock room-element is-locked"/>
+                    <span className="room-element room-name">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor tortor et qq
+                    </span>
+                    <span className="room-element room-package">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec p</span>
+                    <span className="room-element players">2/3</span>
+                    <span className="room-element state">В игре</span>
                 </li>
             </a>
         );
