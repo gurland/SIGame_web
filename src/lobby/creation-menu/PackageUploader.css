@@ -22,6 +22,35 @@
     margin-bottom: 3pt;
 }
 
+#package-info #choose-file{
+    width: 0.1pt;
+    height: 0.1pt;
+    opacity: 0;
+    position: absolute;
+}
+
 #upload-package-btn{
-    margin-top: 7pt;
+    width: 90%;
+    color: #ffe682;
+    background-color: #5a95e2;
+    border: 1px solid #ffe682;
+    padding: 5px 10px 6px 7px;
+    font-family: SI, serif;
+    text-shadow: 1px 1px 0 #000;
+    font-size: 18pt;
+    cursor: pointer;
+    text-align: center;
+}
+
+#upload-package-btn:hover{
+    transition: 0.15s;
+    background-color: #186ca3;
+}
+
+#chosen-package-name{
+    width: 90%;
+    height: 10pt;
+
+    font-size: 13pt;
+    text-align: center;
 }

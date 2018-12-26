@@ -1,35 +1,37 @@
 import React, {Component} from 'react'
 
-import Package from './Package'
 import './PackageUploader.css'
-import Button from "../../Button";
+
 
 export default class PackageUploader extends Component{
     constructor(props) {
         super(props);
 
-        this.state = {
-            selectedPackageId: 0
-
-        };
-
-        this.handlePackageClick = this.handlePackageClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handlePackageClick(id){
-        this.setState({
-            selectedPackageId: id
-        });
+    handleChange(){
+        let input = document.getElementById('choose-file');
+        let fileName = input.value.split('\\').pop();
+        let chosenFileName = document.getElementById('chosen-package-name');
+
+        chosenFileName.innerHTML = fileName;
     }
 
     render() {
         return (
             <form action="" className={'profile-element'} id={'upload-package'}>
                 <div id={'package-info'}>
-                    <input type="text" id={'package-name'} placeholder={'Имя пакета'}/>
-                    <input type="file" id={'choose-file'} accept={'.siq'}/>
+                    <input
+                        type="file"
+                        id={'choose-file'}
+                        accept={'.siq'}
+                        onChange={this.handleChange}/>
                 </div>
-                <Button btnClass={'form-element'} btnId={'upload-package-btn'} btnText={'Загрузить пакет'}/>
+                <label
+                    htmlFor="choose-file"
+                    id={'upload-package-btn'}>Выбрать пакет</label>
+                <span id={'chosen-package-name'}>Вы не выбрали пакет.</span>
             </form>
         );
     }
