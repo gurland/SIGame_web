@@ -45,6 +45,10 @@ docker-compose up
 Используется git feature branch workflow, нужно создавать под каждый
 issue отдельную ветку dev-N, где N - номер issue.
 
+## Trello
+
+[Sprint #1](https://trello.com/b/JLCWShJq/sigame-1) - создание систем комнат, загрузки паков, чата, аккаунтов с аватарами
+
 ## Авторы
 
 * **Stanislav Bobokalo**  [gurland](https://github.com/gurland)
