@@ -1,7 +1,7 @@
-from peewee import Model, CharField, TextField, BooleanField, PostgresqlDatabase
+from playhouse.postgres_ext import Model, CharField, TextField, BooleanField, PostgresqlExtDatabase, UUIDField, ForeignKeyField
 from werkzeug.security import generate_password_hash, check_password_hash
 
-db = PostgresqlDatabase('test', host='db', user='postgres', password='test', port='5432')
+db = PostgresqlExtDatabase('test', host='db', user='postgres', password='test', port='5432')
 
 
 class BaseModel(Model):
@@ -35,4 +35,13 @@ class User(BaseModel):
         return check_password_hash(self.pw_hash, password)
 
 
-db.create_tables([User], safe=True)
+class Package(BaseModel):
+    id = UUIDField(primary_key=True)
+
+
+class UserPackage(BaseModel):
+    user = ForeignKeyField(User)
+    package = ForeignKeyField(Package)
+
+
+db.create_tables([User, Package, UserPackage], safe=True)
