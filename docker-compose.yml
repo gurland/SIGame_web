@@ -1,16 +1,23 @@
 version: '3'
 services:
 
-  siweb:
-    build: .
+  frontend:
+    build: ./frontend/
+    volumes:
+      - ./frontend/app:/frontend/app
+      - ./frontend/public:/frontend/public
+    working_dir: /frontend/
+    command: npm run build
+
+  backend:
+    build: ./backend/
     ports:
     - "80:80"
 
     volumes:
-    - ./app/:/app
+    - ./backend/app/:/app
     - /media/siweb:/media
     - /tmp/siweb:/tmp/siweb
-
 
     environment:
       BROKER_URL: redis://redis:6379/0
@@ -31,12 +38,12 @@ services:
       POSTGRES_DB: "test"
 
 
-  celery:
+  celery_worker:
     build: .
     command: celery worker -A tasks --loglevel INFO
 
     volumes:
-      - ./app/:/app
+      - ./backend/app/:/app
       - /media/siweb:/media
       - /tmp/siweb:/tmp/siweb
 
