@@ -1,6 +1,11 @@
 version: '3'
 services:
 
+  nginx:
+    build: ./nginx/
+    volumes:
+      - ./nginx/public:/data/www
+
   frontend:
     build: ./frontend/
     volumes:
