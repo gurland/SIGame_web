@@ -5,6 +5,6 @@ services:
     build: ./frontend/
     volumes:
       - ./frontend/app:/frontend/app
-      - ./frontend/public:/frontend/public
+      - ./nginx/public:/frontend/public
     working_dir: /frontend/
     command: npm run build
