@@ -10,7 +10,7 @@ body{
 
 @font-face{
     font-family:SI;
-    src: url('fonts/FuturaC.woff') format('woff');
+    src: url('static/fonts/FuturaC.woff') format('woff');
     font-weight: normal;
     font-style:normal;
 }
