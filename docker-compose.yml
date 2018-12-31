@@ -3,6 +3,8 @@ services:
 
   nginx:
     build: ./nginx/
+    ports:
+    - "80:80"
     volumes:
       - ./nginx/public:/data/www
 
@@ -14,19 +16,23 @@ services:
     working_dir: /frontend/
     command: npm run build
 
-  backend:
-    build: ./backend/
-    ports:
-    - "80:80"
+  api:
+    build: ./api/
 
     volumes:
-    - ./backend/app/:/app
+    - ./api:/app
     - /media/siweb:/media
     - /tmp/siweb:/tmp/siweb
+
+    working_dir: /app/
+    command: uwsgi --ini uwsgi.ini
 
     environment:
       BROKER_URL: redis://redis:6379/0
       CELERY_RESULT_BACKEND: redis://redis:6379/0
+
+    depends_on:
+      - "db"
 
   redis:
     image: redis
@@ -36,19 +42,20 @@ services:
   db:
     image: postgres
     restart: always
-    ports:
-    - "5432:5432"
+    expose:
+    - "5432"
     environment:
       POSTGRES_PASSWORD: test
       POSTGRES_DB: "test"
 
 
   celery_worker:
-    build: .
+    build: ./api/
+    working_dir: /app
     command: celery worker -A tasks --loglevel INFO
 
     volumes:
-      - ./backend/app/:/app
+      - ./api/app:/app
       - /media/siweb:/media
       - /tmp/siweb:/tmp/siweb
 
