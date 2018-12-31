@@ -8,3 +8,10 @@ services:
       - ./nginx/public:/frontend/public
     working_dir: /frontend/
     command: npm run build
+
+  nginx:
+    build: ./nginx/
+    ports:
+    - "80:80"
+    volumes:
+      - ./nginx/public:/data/www
