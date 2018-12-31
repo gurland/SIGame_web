@@ -26,12 +26,14 @@ def load_user(user_id):
         return
 
 
-@app.route("/")
+@app.route("/api/")
 def index():
-    if not current_user.is_authenticated:
-        return redirect(url_for('authentication'))
+    return request.path
 
-    return redirect(url_for('game_page'))
+    # if not current_user.is_authenticated:
+    #     return redirect(url_for('authentication'))
+    #
+    # return redirect(url_for('game_page'))
 
 
 @app.route('/game')
