@@ -1,0 +1,61 @@
+#rooms{
+    height: 90%;
+    width: 100%;
+}
+
+#rooms-list{
+    width: 100%;
+    height: 95%;
+    padding: 5pt 2pt 2pt;
+    background-color: #c3d2e2;
+    overflow: auto;
+}
+
+
+#rooms-list ul{
+    margin: 0;
+    padding: 0;
+}
+
+.column-headings-block{
+    width: 100%;
+    height: 5%;
+}
+
+.column-headings-block table{
+    width: 100%;
+    height: 100%;
+}
+
+.column-heading{
+    border: #ffe682 solid 1px;
+    border-top: none;
+    text-align: center;
+}
+
+#is-room-locked{
+    width: 5%;
+    border-right: 0;
+}
+
+#room-name-heading{
+    width: 35%;
+    border-left: 0;
+}
+
+#package-name-headings{
+    width: 30%;
+}
+
+#players-amount-heading{
+    width: 10%;
+}
+
+#room-state{
+    width: 20%;
+}
+
+
+
+
+

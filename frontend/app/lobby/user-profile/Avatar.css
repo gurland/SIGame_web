@@ -1,0 +1,19 @@
+#avatar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    width: 70%;
+}
+
+#avatar #avatar-image{
+    font-size: 96pt;
+    margin: 25pt 25pt 7pt;
+}
+
+
+
+
+
