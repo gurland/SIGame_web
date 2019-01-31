@@ -1,0 +1,31 @@
+.tab{
+    width: 50%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ffe682;
+
+    cursor: pointer;
+}
+
+.tab:hover{
+    transition: 0.15s;
+    background-color: #186ca3;
+}
+
+.tab-title{
+    margin: 0;
+    padding: 0;
+
+    font-family: SI, serif;
+    font-size: 26pt;
+    color: #ffe682;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+}

@@ -1,0 +1,44 @@
+#chat{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#messages{
+    width: 100%;
+    height: 90%;
+
+    background-color: #c3d2e2;
+}
+
+#message-field{
+    width: 100%;
+    height: 10%;
+}
+
+#message-field input{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: auto;
+}
+
+#send-msg-button{
+    width: 100%;
+    height: 5%;
+}
+
+#send-msg-button button{
+    width: 100%;
+    height: 100%;
+
+    font-size: 18pt;
+}
+

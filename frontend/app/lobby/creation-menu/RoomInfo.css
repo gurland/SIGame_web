@@ -1,0 +1,51 @@
+#room-info{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#room-info .section-title{
+    margin-bottom: 5pt;
+    margin-top: 30pt;
+
+    font-size: 32pt;
+}
+
+#room-info input{
+    width: 80%;
+    height: 30pt;
+
+    font-size: 14pt;
+}
+
+#new-room-name{
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+#new-room-password{
+    margin-bottom: 40pt;
+}
+
+#room-info span{
+    font-family: SI, serif;
+    font-size: 28pt;
+    color: #ffe682;
+    text-shadow: 1px 1px 0 #000;
+
+    margin-bottom: 5pt;
+}
+
+#room-info #link{
+    text-align: center;
+    background-color: transparent;
+    border: #ffe682 solid 1pt;
+    cursor: pointer;
+}
+
+
+
