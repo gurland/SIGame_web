@@ -10,7 +10,7 @@ export default class UserProfile extends Component{
             <div id={'profile'}>
                 <Avatar/>
                 <div className={'profile-element'} id="user-login">
-                    <span>Xa4 from hohland test 1488 mazahaka</span>
+                    <span>User Name XXX</span>
                 </div>
                 <form action=""  className={'profile-element'} id={'change-password'}>
                     <input className={'form-element'} id={'current-pass'} type="password" placeholder={'Текущий пароль'}/>
